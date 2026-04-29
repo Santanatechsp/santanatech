@@ -80,10 +80,6 @@ a {
   gap: 22px;
 }
 
-.logo img {
-  height: 54px;
-  display: block;
-}
 
 .menu {
   display: flex;
@@ -1459,27 +1455,18 @@ img {
   display: block;
 }
 
-.btn-orcamento img,
-.whatsapp-float img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
-.service-card .icon {
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 .service-card .icon img {
   width: 42px;
   height: 42px;
   object-fit: contain;
   display: block;
+}
+
+.btn-orcamento img,
+.whatsapp-float img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .client-logo img {
