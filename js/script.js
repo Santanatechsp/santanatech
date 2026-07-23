@@ -1,59 +1,108 @@
-// Menu mobile
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+  const projectsTrack = document.getElementById("projectsTrack");
+  const btnLeft = document.querySelector(".carousel-left");
+  const btnRight = document.querySelector(".carousel-right");
+  const anoAtual = document.getElementById("anoAtual");
 
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    menuBtn.textContent = menu.classList.contains("active") ? "×" : "☰";
-  });
+  if (anoAtual) {
+    anoAtual.textContent = String(new Date().getFullYear());
+  }
 
-  document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-      menuBtn.textContent = "☰";
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      const aberto = menu.classList.toggle("active");
+
+      menuBtn.textContent = aberto ? "×" : "☰";
+      menuBtn.setAttribute("aria-expanded", aberto ? "true" : "false");
+      menuBtn.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
     });
-  });
-}
 
-// Carrossel de projetos
-const projectsTrack = document.getElementById("projectsTrack");
-const btnLeft = document.querySelector(".carousel-left");
-const btnRight = document.querySelector(".carousel-right");
-
-if (projectsTrack && btnLeft && btnRight) {
-  btnLeft.addEventListener("click", () => {
-    projectsTrack.scrollBy({ left: -320, behavior: "smooth" });
-  });
-  btnRight.addEventListener("click", () => {
-    projectsTrack.scrollBy({ left: 320, behavior: "smooth" });
-  });
-}
-
-// Filtro de serviços por categoria
-const filterBar = document.getElementById("filterBar");
-const servicesGrid = document.getElementById("servicesGrid");
-
-if (filterBar && servicesGrid) {
-  const cards = servicesGrid.querySelectorAll(".service-card");
-  const buttons = filterBar.querySelectorAll(".filter-btn");
-
-  filterBar.addEventListener("click", (e) => {
-    const btn = e.target.closest(".filter-btn");
-    if (!btn) return;
-
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const filter = btn.dataset.filter;
-
-    cards.forEach(card => {
-      const show = filter === "todos" || card.dataset.category === filter;
-      card.classList.toggle("hidden", !show);
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Abrir menu");
+      });
     });
-  });
-}
 
-// Ano no rodapé
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+    document.addEventListener("click", (event) => {
+      const clicouDentroMenu = menu.contains(event.target);
+      const clicouNoBotao = menuBtn.contains(event.target);
+
+      if (!clicouDentroMenu && !clicouNoBotao) {
+        menu.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) {
+        menu.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  if (projectsTrack && btnLeft && btnRight) {
+    const calcularDeslocamento = () => {
+      const card = projectsTrack.querySelector(".project-card");
+
+      if (!card) {
+        return 320;
+      }
+
+      const gap = parseFloat(getComputedStyle(projectsTrack).columnGap || "19");
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    btnLeft.addEventListener("click", () => {
+      projectsTrack.scrollBy({
+        left: -calcularDeslocamento(),
+        behavior: "smooth"
+      });
+    });
+
+    btnRight.addEventListener("click", () => {
+      projectsTrack.scrollBy({
+        left: calcularDeslocamento(),
+        behavior: "smooth"
+      });
+    });
+  }
+
+  const elementosAnimados = document.querySelectorAll(
+    ".service-card, .project-card, .result-stat, .pipeline-panel, .automation-copy"
+  );
+
+  if ("IntersectionObserver" in window) {
+    const observador = new IntersectionObserver(
+      (entradas, observer) => {
+        entradas.forEach((entrada) => {
+          if (!entrada.isIntersecting) {
+            return;
+          }
+
+          entrada.target.classList.add("is-visible");
+          observer.unobserve(entrada.target);
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    elementosAnimados.forEach((elemento) => {
+      elemento.classList.add("reveal-item");
+      observador.observe(elemento);
+    });
+  } else {
+    elementosAnimados.forEach((elemento) => {
+      elemento.classList.add("is-visible");
+    });
+  }
+});
