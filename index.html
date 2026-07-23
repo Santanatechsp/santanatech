@@ -87,15 +87,10 @@
         </p>
 
         <div class="hero-actions">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20conversar%20sobre%20um%20projeto!"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <button class="btn btn-primary" id="openProjectModal" type="button">
             Começar um projeto
             <span>→</span>
-          </a>
+          </button>
 
           <a class="btn btn-secondary" href="#servicos">
             Conhecer soluções
@@ -294,9 +289,7 @@
       <div class="services-grid">
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/sistemas.png" alt="">
-          </div>
+          <div class="service-icon icon-teal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 4v5M8 13h3M8 16h6"></path></svg></div>
           <h3>Sistemas personalizados</h3>
           <p>
             Plataformas sob medida para gestão, cadastros, controle interno,
@@ -306,9 +299,7 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/sites.png" alt="">
-          </div>
+          <div class="service-icon icon-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9S14.4 18.4 12 21M12 3C9.6 5.6 8.4 8.6 8.4 12S9.6 18.4 12 21"></path></svg></div>
           <h3>Sites profissionais</h3>
           <p>
             Sites institucionais modernos, responsivos, rápidos e preparados
@@ -318,9 +309,7 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/automacao_empresa.png" alt="">
-          </div>
+          <div class="service-icon icon-purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M4 12h16M4 17h8"></path><circle cx="17" cy="7" r="2"></circle><circle cx="15" cy="17" r="2"></circle></svg></div>
           <h3>Automações empresariais</h3>
           <p>
             Reduza trabalhos manuais, organize rotinas e conecte tarefas que
@@ -330,9 +319,7 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/relatorio_analitico.png" alt="">
-          </div>
+          <div class="service-icon icon-orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path><path d="m5 8 4-3 4 4 5-6"></path></svg></div>
           <h3>Dashboards e relatórios</h3>
           <p>
             Visualizações claras, indicadores, gráficos e relatórios conectados
@@ -342,9 +329,7 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/ia.png" alt="">
-          </div>
+          <div class="service-icon icon-cyan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3"></rect><path d="M9 10h.01M15 10h.01M9 14c1.7 1.3 4.3 1.3 6 0M12 2v4M12 18v4M2 12h4M18 12h4"></path></svg></div>
           <h3>Automação com IA</h3>
           <p>
             Inteligência artificial aplicada a atendimento, análise de
@@ -354,9 +339,7 @@
         </article>
 
         <article class="service-card">
-          <div class="service-icon">
-            <img src="./assets/suporte_presencial.png" alt="">
-          </div>
+          <div class="service-icon icon-green"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"></circle><path d="M5 20c.6-4 3-6 7-6s6.4 2 7 6M4 7l2-2M20 7l-2-2M12 1v3"></path></svg></div>
           <h3>Consultoria e suporte</h3>
           <p>
             Atendimento remoto ou presencial para identificar melhorias,
@@ -506,14 +489,14 @@
           <span class="eyebrow">Projetos e possibilidades</span>
 
           <h2>
-            Soluções que ajudam empresas a
-            <span class="gradient-text">trabalhar melhor.</span>
+            Demandas reais transformadas em
+            <span class="gradient-text">operações inteligentes.</span>
           </h2>
         </div>
 
         <p>
-          Exemplos de aplicações e projetos que podem ser desenvolvidos ou
-          adaptados conforme a necessidade de cada negócio.
+          Cada projeto nasce de uma necessidade concreta: organizar uma operação,
+          acelerar decisões, automatizar tarefas ou fortalecer a presença digital.
         </p>
       </div>
 
@@ -522,79 +505,70 @@
 
         <div class="projects-track" id="projectsTrack">
 
-          <article class="project-card">
-            <div class="project-visual">
-              <div class="project-browser">
-                <div class="browser-top"><i></i><i></i><i></i></div>
-                <div class="project-mini-grid">
-                  <div class="project-mini-chart"></div>
-                  <div class="project-mini-side">
-                    <span></span><span></span><span></span>
-                  </div>
-                </div>
-              </div>
+          <article class="project-card demand-card">
+            <div class="demand-visual demand-visual-ops">
+              <div class="demand-grid"></div>
+              <div class="demand-flow-line flow-a"></div>
+              <div class="demand-flow-line flow-b"></div>
+              <div class="demand-node demand-node-main"><span>OP</span><strong>Operação</strong></div>
+              <div class="demand-node demand-node-one"><span>01</span><small>Entrada</small></div>
+              <div class="demand-node demand-node-two"><span>02</span><small>Validação</small></div>
+              <div class="demand-node demand-node-three"><span>03</span><small>Entrega</small></div>
+              <i class="demand-particle particle-a"></i>
+              <i class="demand-particle particle-b"></i>
             </div>
             <div class="project-content">
               <span>Gestão empresarial</span>
-              <h3>Sistema de controle operacional</h3>
-              <p>Centralização de informações, tarefas, indicadores e relatórios.</p>
+              <h3>Controle operacional centralizado</h3>
+              <p>Demandas, responsáveis, prazos e indicadores conectados em um único ambiente.</p>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-visual visual-blue">
-              <div class="project-browser">
-                <div class="browser-top"><i></i><i></i><i></i></div>
-                <div class="project-mini-grid">
-                  <div class="project-mini-chart"></div>
-                  <div class="project-mini-side">
-                    <span></span><span></span><span></span>
-                  </div>
-                </div>
+          <article class="project-card demand-card">
+            <div class="demand-visual demand-visual-bi">
+              <div class="demand-grid"></div>
+              <div class="mini-dashboard-demand">
+                <div class="mini-kpis"><i></i><i></i><i></i></div>
+                <div class="mini-demand-chart"><span></span><span></span><span></span><span></span><span></span></div>
               </div>
+              <div class="live-badge"><i></i> AO VIVO</div>
             </div>
             <div class="project-content">
               <span>Relatórios e BI</span>
-              <h3>Dashboard de indicadores</h3>
-              <p>Painéis visuais para acompanhar resultados, metas e desempenho.</p>
+              <h3>Decisões guiadas por dados</h3>
+              <p>Dashboards em movimento para acompanhar metas, desempenho e evolução.</p>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-visual visual-green">
-              <div class="project-browser">
-                <div class="browser-top"><i></i><i></i><i></i></div>
-                <div class="project-mini-grid">
-                  <div class="project-mini-chart"></div>
-                  <div class="project-mini-side">
-                    <span></span><span></span><span></span>
-                  </div>
-                </div>
+          <article class="project-card demand-card">
+            <div class="demand-visual demand-visual-auto">
+              <div class="demand-grid"></div>
+              <div class="automation-chain">
+                <div><span>01</span><small>Recebe</small></div><i></i>
+                <div><span>02</span><small>Processa</small></div><i></i>
+                <div><span>03</span><small>Entrega</small></div>
               </div>
+              <div class="automation-scan"></div>
             </div>
             <div class="project-content">
               <span>Automação</span>
-              <h3>Fluxo automático de atendimento</h3>
-              <p>Integração de tarefas e redução de processos repetitivos.</p>
+              <h3>Fluxos que trabalham sozinhos</h3>
+              <p>Integrações, validações e entregas automáticas para eliminar tarefas repetitivas.</p>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-visual visual-orange">
-              <div class="project-browser">
-                <div class="browser-top"><i></i><i></i><i></i></div>
-                <div class="project-mini-grid">
-                  <div class="project-mini-chart"></div>
-                  <div class="project-mini-side">
-                    <span></span><span></span><span></span>
-                  </div>
-                </div>
+          <article class="project-card demand-card">
+            <div class="demand-visual demand-visual-site">
+              <div class="demand-grid"></div>
+              <div class="responsive-devices">
+                <div class="device-desktop"><span></span><i></i><i></i></div>
+                <div class="device-mobile"><span></span><i></i><i></i></div>
               </div>
             </div>
             <div class="project-content">
               <span>Site institucional</span>
-              <h3>Presença digital profissional</h3>
-              <p>Site responsivo com identidade forte e navegação simples.</p>
+              <h3>Presença digital que transmite valor</h3>
+              <p>Experiência profissional, responsiva e preparada para apresentar sua empresa.</p>
             </div>
           </article>
 
@@ -606,63 +580,65 @@
     </div>
   </section>
 
-  <section class="section results-section">
-    <div class="container results-card">
-      <div class="section-heading">
-        <span class="eyebrow">Resultados demonstrativos</span>
-
-        <h2>
-          Tecnologia com foco em
-          <span class="gradient-text">ganho real.</span>
-        </h2>
-
-        <p>
-          Os indicadores são fictícios e demonstram como uma solução pode
-          apresentar resultados de forma clara e profissional.
-        </p>
-      </div>
-
-      <div class="result-stats">
-        <div class="result-stat">
-          <strong>+42%</strong>
-          <span>Aumento de produtividade</span>
-        </div>
-
-        <div class="result-stat">
-          <strong>168h</strong>
-          <span>Horas poupadas no mês</span>
-        </div>
-
-        <div class="result-stat">
-          <strong>98%</strong>
-          <span>Processos acompanhados</span>
-        </div>
-
-        <div class="result-stat">
-          <strong>3x</strong>
-          <span>Mais agilidade nas rotinas</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="section reviews" id="avaliacoes">
     <div class="container">
       <div class="section-heading center">
-        <span class="eyebrow">Avaliações</span>
-
-        <h2>
-          O que dizem sobre
-          <span class="gradient-text">a Santana Tech.</span>
-        </h2>
+        <span class="eyebrow">Avaliações reais</span>
+        <h2>O que dizem sobre <span class="gradient-text">a Santana Tech.</span></h2>
       </div>
 
-      <div class="google-reviews-box">
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div
-          class="elfsight-app-115dea99-931d-4128-8b2c-8c4aace1ba48"
-          data-elfsight-app-lazy
-        ></div>
+      <div class="reviews-platform">
+        <aside class="reviews-summary">
+          <div class="reviews-brand-mark">ST</div>
+          <h3>SantanaTech</h3>
+          <p>R. Otacílio Madeira, 92 - Pedreira, São Paulo - SP, 04472-160, Brasil</p>
+          <div class="rating-line"><strong>5,0</strong><span>★★★★★</span><small>9 avaliações</small></div>
+          <div class="reviews-filter-list">
+            <button class="review-filter active" type="button" data-review-filter="all">Tudo</button>
+            <button class="review-filter" type="button" data-review-filter="trust">Confiabilidade</button>
+            <button class="review-filter" type="button" data-review-filter="pc">Computadores</button>
+          </div>
+          <label class="review-sort-label" for="reviewSort">Ordenar por</label>
+          <select id="reviewSort" class="review-sort">
+            <option value="relevant">Mais relevantes</option>
+            <option value="recent">Mais recentes</option>
+            <option value="highest">Maior classificação</option>
+            <option value="lowest">Menor classificação</option>
+          </select>
+        </aside>
+
+        <div class="reviews-feed" id="reviewsFeed">
+          <article class="review-compose">
+            <div class="review-avatar">DS</div>
+            <div><strong>Douglas Santana (SINOPRESS)</strong><span>1 avaliação · 1 foto</span><button type="button">Descreva sua experiência</button></div>
+          </article>
+
+          <article class="review-item" data-category="pc" data-order="1">
+            <div class="review-avatar">JR</div><div><div class="review-author"><strong>jose Roberto</strong><span>1 avaliação</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Levei meu PC para conserto e tive uma experiência bem positiva. O atendimento foi tranquilo, explicaram direitinho o problema e resolveram mais rápido do que eu esperava. Até agora está funcionando perfeitamente.</p></div>
+          </article>
+          <article class="review-item" data-category="pc" data-order="2">
+            <div class="review-avatar">AG</div><div><div class="review-author"><strong>Amanda Gomes</strong><span>1 avaliação</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Recomendo muito o trabalho. O técnico foi muito atencioso! Instalou SSD, formatou e pacote Office, que já resolveu o problema de lentidão. Tudo instalado com rapidez e qualidade, computador agora está voando. Serviço nota 10!</p></div>
+          </article>
+          <article class="review-item" data-category="trust" data-order="3">
+            <div class="review-avatar">DS</div><div><div class="review-author"><strong>deivid silva</strong><span>3 avaliações</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Muito satisfeito com o atendimento. Resolveu o defeito que meu PC estava apresentando sem enrolação e com muita transparência. Profissional super atencioso e de confiança.</p></div>
+          </article>
+          <article class="review-item" data-category="trust" data-order="4">
+            <div class="review-avatar">CI</div><div><div class="review-author"><strong>Cassio Inard Oliveira Silva</strong><span>2 avaliações</span></div><div class="review-stars">★★★★★ <small>um mês atrás</small></div><p>Top demais, sempre atencioso e cuidadoso com o que faz, super responsável e competente.</p></div>
+          </article>
+          <article class="review-item" data-category="trust" data-order="5">
+            <div class="review-avatar">NT</div><div><div class="review-author"><strong>Nícolas Torres</strong><span>4 avaliações</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Empresa 100% confiável, com um excelente profissional.</p></div>
+          </article>
+          <article class="review-item" data-category="trust" data-order="6">
+            <div class="review-avatar">AC</div><div><div class="review-author"><strong>Asafe Caio</strong><span>1 avaliação</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Serviço sério e com qualidade. Recomendo. <span class="review-reaction">🙏 1</span></p></div>
+          </article>
+          <article class="review-item" data-category="pc" data-order="7">
+            <div class="review-avatar">AL</div><div><div class="review-author"><strong>Anderson Lima</strong><span>3 avaliações</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Levei meu notebook para trocar a tela e fazer a formatação e fiquei bem satisfeito com o serviço. Atendimento cuidadoso e resultado excelente.</p></div>
+          </article>
+          <article class="review-item" data-category="trust" data-order="8">
+            <div class="review-avatar">MG</div><div><div class="review-author"><strong>marcia gregorio bezerra</strong><span>9 avaliações · 1 foto</span></div><div class="review-stars">★★★★★ <small>2 meses atrás</small></div><p>Excelente serviço! Resolveram rapidamente o problema da minha rede. Recomendo a empresa.</p></div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -726,6 +702,33 @@
   </section>
 
 </main>
+
+<div class="project-modal" id="projectModal" hidden aria-hidden="true">
+  <div class="project-modal-backdrop" data-close-project-modal></div>
+  <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <button class="project-modal-close" type="button" data-close-project-modal aria-label="Fechar">×</button>
+    <span class="eyebrow">Novo projeto</span>
+    <h2 id="projectModalTitle">Conte sua ideia para a Santana Tech</h2>
+    <p>Preencha os dados abaixo. Ao finalizar, a mensagem será preparada para envio pelo WhatsApp.</p>
+
+    <form id="projectForm" class="project-form">
+      <label>Nome do projeto<input type="text" id="projectName" required placeholder="Ex.: Sistema de atendimento"></label>
+      <label>Tipo de projeto
+        <select id="projectType" required>
+          <option value="">Selecione uma opção</option>
+          <option>Sistema personalizado</option><option>Site profissional</option><option>Automação empresarial</option><option>Automação com IA</option><option>Dashboard e relatório</option><option>Aplicação web</option><option>Consultoria técnica</option><option value="Outros">Outros</option>
+        </select>
+      </label>
+      <label id="otherProjectWrap" hidden>Qual tipo de projeto?<input type="text" id="otherProjectType" placeholder="Digite o tipo de projeto"></label>
+      <div class="project-form-row">
+        <label>Prazo desejado<select id="projectDeadline" required><option value="">Selecione</option><option>O mais breve possível</option><option>Até 30 dias</option><option>De 30 a 60 dias</option><option>De 60 a 90 dias</option><option>Sem prazo definido</option></select></label>
+        <label>WhatsApp<input type="tel" id="projectWhatsapp" required placeholder="(11) 99999-9999"></label>
+      </div>
+      <label>Descrição<textarea id="projectDescription" required placeholder="Explique a necessidade, o processo atual e o resultado esperado."></textarea></label>
+      <button class="btn btn-primary project-submit" type="submit">Enviar projeto pelo WhatsApp <span>→</span></button>
+    </form>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container footer-content">
