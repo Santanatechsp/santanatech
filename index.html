@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Santana Tech | Soluções Personalizadas</title>
+  <title>Santana Tech | Sistemas, Sites e Automação sob medida</title>
+  <meta name="description" content="Desenvolvimento de sistemas, sites e automações sob medida, com consultoria online e presencial. Tecnologia pensada para o seu negócio, não o contrário.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/script.js"></script>
 
   <link rel="apple-touch-icon" href="./assets/favicon.png">
 </head>
@@ -28,6 +27,7 @@
     <nav class="menu" id="menu">
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
       <a href="#clientes">Clientes</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#contato">Contato</a>
@@ -36,11 +36,11 @@
     <a class="btn-orcamento"
        href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20um%20orçamento!"
        target="_blank">
-      <img src="assets/whatsapp.png" alt="WhatsApp">
-      <span>Solicite um orçamento</span>
+      <img src="assets/whatsapp.png" alt="">
+      <span>Solicitar orçamento</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
 
   </div>
 </header>
@@ -51,17 +51,18 @@
   <div class="container hero-grid">
 
     <div class="hero-text">
-      <span class="badge">Tecnologia para empresas modernas</span>
+      <span class="badge">Tecnologia sob medida para empresas</span>
 
       <h1>
-        Criamos sites,
-        <strong>Sistemas SaaS,</strong>
-        Automação e Consultoria Presencial
+        Sistemas, sites e automação
+        <strong>que trabalham pelo seu negócio</strong>
       </h1>
 
       <p>
-        Personalização para sua ideia </p>
-		<p>Soluções em tecnologia, desenvolvimento, <forte>manutenção de computadores e sistemas para totens interativos de sua loja</forte>, focadas em performance, praticidade e resultados reais.</p>
+        Desenvolvemos sistemas, sites e automações sob medida — com consultoria
+        técnica online e presencial, e manutenção contínua de computadores e
+        totens interativos. Menos trabalho manual, mais tempo para o que importa.
+      </p>
 
       <div class="hero-actions">
         <a class="btn-primary"
@@ -74,74 +75,55 @@
           Ver serviços
         </a>
       </div>
+
+      <div class="hero-trust">
+        <span>Atendimento sob medida</span>
+        <span>Suporte remoto e presencial</span>
+        <span>Projetos entregues em São Paulo</span>
+      </div>
     </div>
 
     <div class="hero-visual">
-	<div class="report-visual">
-  <div class="report-window">
-    <div class="window-header">
-      <span></span><span></span><span></span>
-      <strong>Relatório Inteligente</strong>
-    </div>
-
-    <div class="report-grid">
-      <div class="report-cell title">Cliente</div>
-      <div class="report-cell title">Status</div>
-      <div class="report-cell title">Resultado</div>
-
-      <div class="report-cell">Santana</div>
-      <div class="report-cell ok">Ativo</div>
-      <div class="report-cell">+72%</div>
-
-      <div class="report-cell">Projeto A</div>
-      <div class="report-cell progress">Em análise</div>
-      <div class="report-cell">+38%</div>
-
-      <div class="report-cell">Automação</div>
-      <div class="report-cell ok">Concluído</div>
-      <div class="report-cell">+91%</div>
-    </div>
-  </div>
-
-  <div class="ppt-window">
-    <div class="ppt-slide">
-      <div class="ppt-title"></div>
-      <div class="ppt-chart"></div>
-      <div class="ppt-lines">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-</div>
-      
-
-      <div class="tech-card main-card">
-        <div class="window-dots">
-          <span></span><span></span><span></span>
+      <div class="hero-panel">
+        <div class="panel-header">
+          <div class="panel-dots"><span></span><span></span><span></span></div>
+          <strong>painel · santana tech</strong>
         </div>
 
-        <div class="dashboard">
-          <div>
-            <small>Performance</small>
-            <strong>+72%</strong>
+        <div class="panel-tabs">
+          <span class="tab active">Sistemas</span>
+          <span class="tab">Relatórios</span>
+          <span class="tab">Automação</span>
+        </div>
+
+        <div class="panel-body">
+          <div class="panel-list">
+            <div class="panel-row head">
+              <span>Projeto</span><span>Status</span>
+            </div>
+            <div class="panel-row">
+              <span>Gestão interna</span><span class="tag ok">Em produção</span>
+            </div>
+            <div class="panel-row">
+              <span>Site institucional</span><span class="tag done">Concluído</span>
+            </div>
+            <div class="panel-row">
+              <span>Automação de atendimento</span><span class="tag progress">Em ajuste</span>
+            </div>
           </div>
-          <div class="chart"></div>
-        </div>
 
-        <div class="code-box">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="panel-graph" aria-hidden="true">
+            <span style="--h:38%"></span>
+            <span style="--h:62%"></span>
+            <span style="--h:48%"></span>
+            <span style="--h:80%"></span>
+            <span style="--h:66%"></span>
+          </div>
         </div>
       </div>
 
-      <div class="floating-card card-one">Sites Profissionais</div>
-      <div class="floating-card card-two">Automações</div>
-      <div class="floating-card card-three">Sistemas Web</div>
-
+      <div class="floating-tag tag-one">Sites profissionais</div>
+      <div class="floating-tag tag-two">Automação inteligente</div>
     </div>
 
   </div>
@@ -151,136 +133,116 @@
   <div class="container">
 
     <div class="section-title">
-      <div class="tag-box">NOSSOS SERVIÇOS</div>
+      <div class="tag-box">Nossos serviços</div>
       <h2>
-        Tecnologia completa<br>
-        <span class="blue">para cada necessidade</span>
+        Tecnologia completa,<br>
+        <span class="accent">organizada por área</span>
       </h2>
+      <p class="section-lead">Escolha uma categoria para ver o que fazemos nela — ou veja tudo de uma vez.</p>
     </div>
 
-    <div class="services-grid">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="desenvolvimento">Desenvolvimento</button>
+      <button class="filter-btn" data-filter="automacao">Automação &amp; IA</button>
+      <button class="filter-btn" data-filter="relatorios">Relatórios &amp; Dados</button>
+      <button class="filter-btn" data-filter="consultoria">Consultoria &amp; Gestão</button>
+      <button class="filter-btn" data-filter="apresentacoes">Apresentações</button>
+    </div>
 
-  <div class="service-card">
-  <div class="icon">
-    <img src="assets/sistemas.png" alt="Criação de Sistemas">
-  </div>
-  <h3>Criação de Sistemas</h3>
-  <p>Sistemas sob medida para controle interno, gestão, cadastro, relatórios e processos.</p>
-</div>
+    <div class="services-grid" id="servicesGrid">
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/sites.png" alt="Criação de Sites">
-  </div>
-  <h3>Criação de Sites</h3>
-  <p>Sites modernos, responsivos e preparados para apresentar sua empresa com autoridade.</p>
-</div>
+      <div class="service-card" data-category="desenvolvimento">
+        <div class="icon"><img src="assets/sistemas.png" alt=""></div>
+        <h3>Criação de sistemas</h3>
+        <p>Sistemas sob medida para controle interno, gestão, cadastro, relatórios e processos.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/aplicacao_web.png" alt="Criação de Aplicações Web">
-  </div>
-  <h3>Criação de Aplicações Web</h3>
-  <p>Aplicações online para automatizar processos, centralizar informações e facilitar a rotina da empresa.</p>
-</div>
+      <div class="service-card" data-category="desenvolvimento">
+        <div class="icon"><img src="assets/sites.png" alt=""></div>
+        <h3>Criação de sites</h3>
+        <p>Sites modernos, responsivos e preparados para apresentar sua empresa com autoridade.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/automacao_pessoal.png" alt="Automação Pessoal">
-  </div>
-  <h3>Automação Pessoal</h3>
-  <p>Automações simples e práticas para organizar tarefas, arquivos, planilhas e atividades do dia a dia.</p>
-</div>
+      <div class="service-card" data-category="desenvolvimento">
+        <div class="icon"><img src="assets/aplicacao_web.png" alt=""></div>
+        <h3>Aplicações web</h3>
+        <p>Aplicações online para automatizar processos, centralizar informações e facilitar a rotina.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/automacao_empresa.png" alt="Automação Empresa">
-  </div>
-  <h3>Automação Empresa</h3>
-  <p>Soluções para reduzir trabalhos manuais, integrar setores e melhorar a produtividade da equipe.</p>
-</div>
+      <div class="service-card" data-category="automacao">
+        <div class="icon"><img src="assets/automacao_pessoal.png" alt=""></div>
+        <h3>Automação pessoal</h3>
+        <p>Automações simples e práticas para organizar tarefas, arquivos, planilhas e atividades do dia a dia.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/ia.png" alt="Automação com IA">
-  </div>
-  <h3>Automação com IA</h3>
-  <p>Uso de inteligência artificial para acelerar atendimentos, análises e processos internos.</p>
-</div>
+      <div class="service-card" data-category="automacao">
+        <div class="icon"><img src="assets/automacao_empresa.png" alt=""></div>
+        <h3>Automação para empresas</h3>
+        <p>Soluções para reduzir trabalho manual, integrar setores e melhorar a produtividade da equipe.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/relatorio_personalizado.png" alt="Relatórios Personalizados">
-  </div>
-  <h3>Relatórios Personalizados</h3>
-  <p>Relatórios feitos conforme a necessidade do cliente, com dados claros e organizados.</p>
-</div>
+      <div class="service-card" data-category="automacao">
+        <div class="icon"><img src="assets/ia.png" alt=""></div>
+        <h3>Automação com IA</h3>
+        <p>Uso de inteligência artificial para acelerar atendimentos, análises e processos internos.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/relatorio_analitico.png" alt="Relatórios Analíticos">
-  </div>
-  <h3>Relatórios Analíticos</h3>
-  <p>Análises visuais para acompanhar desempenho e apoiar decisões estratégicas.</p>
-</div>
+      <div class="service-card" data-category="relatorios">
+        <div class="icon"><img src="assets/relatorio_personalizado.png" alt=""></div>
+        <h3>Relatórios personalizados</h3>
+        <p>Relatórios feitos conforme a necessidade do cliente, com dados claros e organizados.</p>
+      </div>
 
-  <div class="service-card">
-  <div class="icon">
-    <img src="assets/banco_dados.png" alt="Relatórios com Base de Dados">
-  </div>
-  <h3>Relatórios com Base de Dados</h3>
-  <p>Relatórios conectados a bancos de dados ou planilhas com atualização automática.</p>
-</div>
+      <div class="service-card" data-category="relatorios">
+        <div class="icon"><img src="assets/relatorio_analitico.png" alt=""></div>
+        <h3>Relatórios analíticos</h3>
+        <p>Análises visuais para acompanhar desempenho e apoiar decisões estratégicas.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/suporte_online.png" alt="Consultoria Online">
-  </div>
-  <h3>Consultoria Online</h3>
-  <p>Suporte remoto para orientar e melhorar processos e sistemas.</p>
-</div>
+      <div class="service-card" data-category="relatorios">
+        <div class="icon"><img src="assets/banco_dados.png" alt=""></div>
+        <h3>Relatórios com base de dados</h3>
+        <p>Relatórios conectados a bancos de dados ou planilhas, com atualização automática.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/suporte_presencial.png" alt="Consultoria Presencial">
-  </div>
-  <h3>Consultoria Presencial</h3>
-  <p>Acompanhamento técnico direto na empresa com foco em resultado.</p>
-</div>
+      <div class="service-card" data-category="consultoria">
+        <div class="icon"><img src="assets/suporte_online.png" alt=""></div>
+        <h3>Consultoria online</h3>
+        <p>Suporte remoto para orientar e melhorar processos e sistemas.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/gestao_projeto.png" alt="Gestão de Projetos">
-  </div>
-  <h3>Gestão de Projetos</h3>
-  <p>Organização e acompanhamento completo do desenvolvimento do seu projeto.</p>
-</div>
+      <div class="service-card" data-category="consultoria">
+        <div class="icon"><img src="assets/suporte_presencial.png" alt=""></div>
+        <h3>Consultoria presencial</h3>
+        <p>Acompanhamento técnico direto na empresa, com foco em resultado.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/apresentacoes_personalizadas.png" alt="Apresentações Personalizadas">
-  </div>
-  <h3>Apresentações Personalizadas</h3>
-  <p>Criação de apresentações profissionais para reuniões e propostas.</p>
-</div>
+      <div class="service-card" data-category="consultoria">
+        <div class="icon"><img src="assets/gestao_projeto.png" alt=""></div>
+        <h3>Gestão de projetos</h3>
+        <p>Organização e acompanhamento completo do desenvolvimento do seu projeto.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/powerpoint.png" alt="Apresentações em PowerPoint">
-  </div>
-  <h3>Apresentações em PowerPoint</h3>
-  <p>Materiais editáveis prontos para uso em reuniões e apresentações.</p>
-</div>
+      <div class="service-card" data-category="apresentacoes">
+        <div class="icon"><img src="assets/apresentacoes_personalizadas.png" alt=""></div>
+        <h3>Apresentações personalizadas</h3>
+        <p>Criação de apresentações profissionais para reuniões e propostas.</p>
+      </div>
 
-<div class="service-card">
-  <div class="icon">
-    <img src="assets/slides.png" alt="Apresentações em Slides">
-  </div>
-  <h3>Apresentações em Slides</h3>
-  <p>Slides modernos e organizados para comunicar ideias com clareza.</p>
-</div>
+      <div class="service-card" data-category="apresentacoes">
+        <div class="icon"><img src="assets/powerpoint.png" alt=""></div>
+        <h3>Apresentações em PowerPoint</h3>
+        <p>Materiais editáveis, prontos para uso em reuniões e apresentações.</p>
+      </div>
 
-</div>
+      <div class="service-card" data-category="apresentacoes">
+        <div class="icon"><img src="assets/slides.png" alt=""></div>
+        <h3>Apresentações em slides</h3>
+        <p>Slides modernos e organizados para comunicar ideias com clareza.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -289,98 +251,82 @@
 
     <div class="projects-header">
       <div>
-        <div class="tag-box">PROJETOS QUE GERAM IMPACTO</div>
+        <div class="tag-box">Projetos que geram impacto</div>
         <h2>
-          IDEIAS QUE VIRAM<br>
-          <span class="blue">SOLUÇÕES REAIS</span>
+          Ideias que viram<br>
+          <span class="accent">soluções reais</span>
         </h2>
       </div>
 
       <div class="projects-text">
         <p>
-          Conheça alguns projetos desenvolvidos pela Santana Tech e veja como ajudamos negócios a evoluírem com tecnologia.
+          Conheça alguns projetos desenvolvidos pela Santana Tech e veja como
+          ajudamos negócios a evoluir com tecnologia.
         </p>
 
         <a href="#contato" class="btn-projects">
-          Ver todos os projetos
+          Falar sobre um projeto
           <span>›</span>
         </a>
       </div>
     </div>
 
     <div class="projects-carousel">
-      <button class="carousel-btn carousel-left" type="button">‹</button>
+      <button class="carousel-btn carousel-left" type="button" aria-label="Anterior">‹</button>
 
       <div class="projects-track" id="projectsTrack">
 
         <div class="project-card">
-          <div class="project-image project-gestao">
-            <div class="fake-screen">
-              <span></span><span></span><span></span>
-              <div></div>
-            </div>
+          <div class="project-image">
+            <span class="project-tag">Sistema</span>
           </div>
-          <h3>Sistema de Gestão</h3>
-          <p>Empresa de Logística</p>
+          <h3>Sistema de gestão</h3>
+          <p>Empresa de logística</p>
         </div>
 
         <div class="project-card">
-          <div class="project-image project-delivery">
-            <div class="phone phone-one"></div>
-            <div class="phone phone-two"></div>
+          <div class="project-image alt-a">
+            <span class="project-tag">Aplicativo</span>
           </div>
-          <h3>Aplicativo de Delivery</h3>
-          <p>Restaurantes e Foods</p>
+          <h3>Aplicativo de delivery</h3>
+          <p>Restaurantes e foods</p>
         </div>
 
         <div class="project-card">
-          <div class="project-image project-totem">
-            <div class="totem-box">
-              <span></span>
-              <strong>CHECKOUT</strong>
-              <small>Pagamento rápido</small>
-            </div>
+          <div class="project-image alt-b">
+            <span class="project-tag">Totem</span>
           </div>
-          <h3>Totem</h3>
+          <h3>Totem de autoatendimento</h3>
           <p>Sistema de pagamento para barbearias</p>
         </div>
 
         <div class="project-card">
-          <div class="project-image project-ecr">
-            <div class="dashboard-mini">
-              <span></span>
-              <div></div>
-              <div></div>
-            </div>
+          <div class="project-image alt-c">
+            <span class="project-tag">Plataforma</span>
           </div>
           <h3>Plataforma de ECR</h3>
           <p>Controle, análise e relatórios</p>
         </div>
 
         <div class="project-card">
-          <div class="project-image project-site">
-            <div class="site-preview">
-              <span></span>
-              <div></div>
-            </div>
+          <div class="project-image alt-d">
+            <span class="project-tag">Site</span>
           </div>
-          <h3>Site Institucional</h3>
-          <p>Clínica Médica</p>
+          <h3>Site institucional</h3>
+          <p>Clínica médica</p>
         </div>
 
         <div class="project-card">
-          <div class="project-image project-auto">
-            <div class="automation-preview">
-              <span></span><span></span><span></span>
-            </div>
+          <div class="project-image alt-e">
+            <span class="project-tag">Automação</span>
           </div>
-          <h3>Automação Comercial</h3>
+          <h3>Automação comercial</h3>
           <p>Processos internos e atendimento</p>
         </div>
 
       </div>
 
-      <button class="carousel-btn carousel-right" type="button">›</button>
+      <button class="carousel-btn carousel-right" type="button" aria-label="Próximo">›</button>
     </div>
 
   </div>
@@ -391,16 +337,16 @@
   <div class="container">
 
     <div class="section-title">
-      <div class="tag-box">CLIENTES</div>
+      <div class="tag-box">Clientes</div>
       <h2>
         Empresas que já confiaram<br>
-        <span class="blue">em nosso trabalho</span>
+        <span class="accent">no nosso trabalho</span>
       </h2>
     </div>
 
     <div class="clients-grid">
-	  <div class="client-logo"><img src="assets/tfAgtN6Y7W8XKwNjsSAASRupfrA.avif" alt="Kei Sushi"></div>
-      <div class="client-logo"><img src="assets/nutri_taina.png" alt="Nutricionista Tainá"></div>	  
+      <div class="client-logo"><img src="assets/tfAgtN6Y7W8XKwNjsSAASRupfrA.avif" alt="Kei Sushi"></div>
+      <div class="client-logo"><img src="assets/nutri_taina.png" alt="Nutricionista Tainá"></div>
       <div class="client-logo"><img src="assets/barbeariavillas.jpeg" alt="Barbearia Villas"></div>
       <div class="client-logo"><img src="assets/elpapis.jpeg" alt="El Papis Barbeiro"></div>
       <div class="client-logo"><img src="assets/rdmotos.jpg" alt="RD Motos"></div>
@@ -414,10 +360,10 @@
   <div class="container">
 
     <div class="section-title">
-      <div class="tag-box">AVALIAÇÕES</div>
+      <div class="tag-box">Avaliações</div>
       <h2>
         O que dizem sobre<br>
-        <span class="blue">a Santana Tech</span>
+        <span class="accent">a Santana Tech</span>
       </h2>
     </div>
 
@@ -433,20 +379,32 @@
   <div class="container cta-box">
 
     <div class="cta-content">
-      <div class="tag-box">CONTATO</div>
+      <div class="tag-box">Contato</div>
 
       <h2>Vamos tirar sua ideia do papel?</h2>
 
       <p>
-        Preencha o formulário abaixo ou solicite um orçamento pelo WhatsApp.
+        Preencha o formulário ao lado ou fale agora mesmo pelo WhatsApp — respondemos
+        o mais rápido possível.
       </p>
 
       <a class="btn-orcamento footer"
          href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20um%20orçamento!"
          target="_blank">
-        <img src="assets/whatsapp.png" alt="WhatsApp">
-        <span>Solicite um orçamento</span>
+        <img src="assets/whatsapp.png" alt="">
+        <span>Solicitar orçamento</span>
       </a>
+
+      <div class="cta-meta">
+        <div>
+          <small>Atendimento</small>
+          <strong>Remoto e presencial</strong>
+        </div>
+        <div>
+          <small>Região</small>
+          <strong>São Paulo, SP</strong>
+        </div>
+      </div>
     </div>
 
     <form class="contact-form"
@@ -483,10 +441,44 @@
 
 </main>
 
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <a href="#inicio" class="logo"><img src="./assets/logo.png" alt="Santana Tech"></a>
+      <p>Sistemas, sites e automação sob medida — com consultoria técnica
+        online e presencial para pequenas e médias empresas.</p>
+    </div>
+
+    <div class="footer-col">
+      <strong>Navegação</strong>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#avaliacoes">Avaliações</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contato</strong>
+      <a href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank">WhatsApp</a>
+      <a href="mailto:santanatechsp@gmail.com">santanatechsp@gmail.com</a>
+      <span>São Paulo, SP</span>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Santana Tech. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
 <a class="whatsapp-float"
    href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20um%20orçamento!"
-   target="_blank">
-  <img src="assets/whatsapp.png" alt="WhatsApp">
+   target="_blank"
+   aria-label="Falar no WhatsApp">
+  <img src="assets/whatsapp.png" alt="">
 </a>
 
 <script src="js/script.js"></script>
