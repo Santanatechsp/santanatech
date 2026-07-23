@@ -106,3 +106,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// Modal de novo projeto
+const projectModal = document.getElementById("projectModal");
+const openProjectModal = document.getElementById("openProjectModal");
+const projectForm = document.getElementById("projectForm");
+const projectType = document.getElementById("projectType");
+const otherProjectWrap = document.getElementById("otherProjectWrap");
+const otherProjectType = document.getElementById("otherProjectType");
+
+function setProjectModal(open) {
+  if (!projectModal) return;
+  projectModal.hidden = !open;
+  projectModal.setAttribute("aria-hidden", open ? "false" : "true");
+  document.body.classList.toggle("modal-open", open);
+  if (open) setTimeout(() => document.getElementById("projectName")?.focus(), 50);
+}
+
+openProjectModal?.addEventListener("click", () => setProjectModal(true));
+document.querySelectorAll("[data-close-project-modal]").forEach((el) => el.addEventListener("click", () => setProjectModal(false)));
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") setProjectModal(false); });
+
+projectType?.addEventListener("change", () => {
+  const isOther = projectType.value === "Outros";
+  otherProjectWrap.hidden = !isOther;
+  if (otherProjectType) otherProjectType.required = isOther;
+});
+
+projectForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const type = projectType.value === "Outros" ? otherProjectType.value.trim() : projectType.value;
+  const message = [
+    "Olá, gostaria de conversar sobre um novo projeto.",
+    "",
+    `Nome do projeto: ${document.getElementById("projectName").value.trim()}`,
+    `Tipo de projeto: ${type}`,
+    `Prazo: ${document.getElementById("projectDeadline").value}`,
+    `Meu WhatsApp: ${document.getElementById("projectWhatsapp").value.trim()}`,
+    "",
+    "Descrição:",
+    document.getElementById("projectDescription").value.trim()
+  ].join("\\n");
+  window.open(`https://wa.me/5511956919990?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+});
+
+// Filtros simples das avaliações
+const reviewFilters = document.querySelectorAll(".review-filter");
+const reviewItems = Array.from(document.querySelectorAll(".review-item"));
+reviewFilters.forEach((button) => button.addEventListener("click", () => {
+  reviewFilters.forEach((item) => item.classList.remove("active"));
+  button.classList.add("active");
+  const filter = button.dataset.reviewFilter;
+  reviewItems.forEach((item) => { item.hidden = filter !== "all" && item.dataset.category !== filter; });
+}));
+
+document.getElementById("reviewSort")?.addEventListener("change", (event) => {
+  const feed = document.getElementById("reviewsFeed");
+  if (!feed) return;
+  const compose = feed.querySelector(".review-compose");
+  const items = [...reviewItems];
+  if (event.target.value === "recent") items.reverse();
+  items.forEach((item) => feed.appendChild(item));
+  if (compose) feed.prepend(compose);
+});
