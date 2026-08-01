@@ -154,3 +154,39 @@
     background: linear-gradient(135deg,#0b91a3,#2d72e4) !important;
   }
 }
+
+
+/* =========================================================
+   CABEÇALHO DO DASHBOARD COMPACTO + BOTÃO DE AGENDA
+   ========================================================= */
+.global-site-header .global-header-inner {
+  min-height: 58px !important;
+}
+.global-site-header .global-logo img {
+  width: 124px !important;
+}
+.global-site-header .global-nav {
+  gap: 11px !important;
+}
+.global-site-header .global-nav a {
+  font-size: 9px !important;
+}
+.global-site-header .global-dashboard,
+.global-site-header .global-contact {
+  min-height: 35px !important;
+  padding: 0 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.agenda-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+.agenda-whatsapp-icon {
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: contain !important;
+  flex: 0 0 16px !important;
+}

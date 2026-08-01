@@ -124,3 +124,48 @@
     margin-left: auto;
   }
 }
+
+
+/* =========================================================
+   CABEÇALHO INTERNO COMPACTO + BOTÃO DE AGENDA
+   ========================================================= */
+.sp-header .sp-header-inner {
+  min-height: 58px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.sp-header .sp-logo img {
+  width: 125px !important;
+}
+.sp-header .sp-nav {
+  gap: 11px !important;
+}
+.sp-header .sp-nav a {
+  font-size: 9px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.sp-header .sp-cta,
+.sp-header .sp-dashboard-link {
+  min-height: 36px !important;
+  padding: 0 10px !important;
+  font-size: 8px !important;
+}
+.agenda-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+.agenda-whatsapp-icon {
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: contain !important;
+  flex: 0 0 16px !important;
+}
+@media (max-width: 1180px) {
+  .sp-header .sp-header-inner {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+}

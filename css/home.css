@@ -1930,3 +1930,58 @@ button {
   color: #fff !important;
   text-align: center;
 }
+
+
+/* =========================================================
+   CABEÇALHO COMPACTO + BOTÃO DE AGENDA
+   ========================================================= */
+.site-header .header-inner {
+  min-height: 60px !important;
+}
+.site-header .brand img {
+  width: 132px !important;
+}
+.site-header .desktop-nav {
+  gap: 17px !important;
+}
+.site-header .desktop-nav a {
+  font-size: 11px !important;
+}
+.site-header .header-actions {
+  gap: 8px !important;
+}
+.site-header .header-cta,
+.site-header .nav-dashboard {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  font-size: 9px !important;
+}
+.agenda-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+}
+.agenda-whatsapp-icon {
+  width: 17px !important;
+  height: 17px !important;
+  object-fit: contain !important;
+  flex: 0 0 17px !important;
+}
+.mobile-nav {
+  inset: 60px 0 auto 0 !important;
+  max-height: calc(100vh - 60px) !important;
+}
+@media (max-width: 760px) {
+  .site-header .header-inner {
+    min-height: 56px !important;
+  }
+  .site-header .brand img {
+    width: 122px !important;
+  }
+  .mobile-nav {
+    top: 56px !important;
+    max-height: calc(100vh - 56px) !important;
+  }
+}
