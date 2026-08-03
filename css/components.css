@@ -163,10 +163,13 @@
   text-align: center;
 }
 
+/* RODAPÉ CLARO */
+
 .global-footer {
   padding: 64px 0 0;
-  background: #04111d;
-  color: #ffffff;
+  background: #f5f9fc;
+  color: #183246;
+  border-top: 1px solid rgba(15, 61, 91, 0.1);
 }
 
 .global-footer-grid {
@@ -183,16 +186,20 @@
 .global-footer-brand p {
   max-width: 330px;
   margin: 20px 0;
-  color: #9fb4c2;
+  color: #657d8e;
   font-size: 14px;
   line-height: 1.7;
 }
 
 .global-footer-about {
-  color: #5ee2db;
+  color: #167f91;
   font-size: 13px;
   font-weight: 800;
   text-decoration: none;
+}
+
+.global-footer-about:hover {
+  color: #0f5f70;
 }
 
 .global-footer-grid > div:not(.global-footer-brand) {
@@ -204,20 +211,27 @@
 
 .global-footer-grid strong {
   margin-bottom: 7px;
-  color: #ffffff;
+  color: #061827;
   font-size: 13px;
 }
 
 .global-footer-grid a,
 .global-footer-grid span {
-  color: #9fb4c2;
+  color: #657d8e;
   font-size: 12px;
   line-height: 1.5;
   text-decoration: none;
 }
 
+.global-footer-grid a {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
 .global-footer-grid a:hover {
-  color: #5ee2db;
+  color: #167f91;
+  transform: translateX(2px);
 }
 
 .global-footer-bottom {
@@ -227,7 +241,7 @@
   gap: 20px;
   margin-top: 48px;
   padding: 22px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid rgba(15, 61, 91, 0.1);
 }
 
 .global-footer-bottom p,
@@ -236,6 +250,10 @@
   color: #78909f;
   font-size: 11px;
   text-decoration: none;
+}
+
+.global-footer-bottom a:hover {
+  color: #167f91;
 }
 
 .component-load-error {
