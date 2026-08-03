@@ -817,3 +817,126 @@
     height: 31px;
   }
 }
+
+
+/* =========================================================
+   AJUSTES FINAIS - versão simplificada
+   ========================================================= */
+
+/* A página começa diretamente pela seleção de projetos. */
+.projects-intro {
+  padding-top: 92px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(32, 199, 201, .10), transparent 24%),
+    linear-gradient(180deg, #f8fcff 0%, #f3f8fb 100%);
+}
+
+.projects-list {
+  padding-top: 76px;
+}
+
+.projects-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.projects-contact-button {
+  min-width: 210px;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 13px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.projects-contact-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.projects-contact-whatsapp {
+  background: linear-gradient(135deg, #20bd67, #128c4f);
+  box-shadow: 0 16px 34px rgba(20, 149, 82, .24);
+}
+
+.projects-contact-whatsapp img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.projects-contact-email {
+  background: linear-gradient(135deg, #2e7df1, #185fc5);
+  box-shadow: 0 16px 34px rgba(31, 105, 210, .24);
+}
+
+.email-symbol {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-content: center;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* O círculo permanece igual ao da home e apenas o símbolo interno ganha destaque. */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 16px 35px rgba(25, 121, 66, .28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 20px 42px rgba(25, 121, 66, .34);
+}
+
+.whatsapp-float img {
+  width: 30px !important;
+  height: 30px !important;
+  object-fit: contain;
+}
+
+@media (max-width: 1080px) {
+  .projects-cta-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-intro {
+    padding-top: 70px;
+  }
+
+  .projects-contact-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+  }
+}
