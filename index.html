@@ -45,7 +45,8 @@
       <a href="#sistemas">Sistemas personalizados</a>
       <a href="#ia-aws">IA e AWS</a>
       <a href="#projetos">Projetos</a>
-      <a class="nav-dashboard pulse-attention" href="/demo-analise-reputacao/">VER DASHBOARD</a>
+      <a href="/extras/">Extras</a>
+      <a class="nav-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -64,7 +65,8 @@
     <a href="#sistemas">Sistemas personalizados</a>
     <a href="#ia-aws">IA e AWS</a>
     <a href="#projetos">Projetos</a>
-    <a class="mobile-dashboard pulse-attention" href="/demo-analise-reputacao/">VER DASHBOARD</a>
+    <a href="/extras/">Extras</a>
+    <a class="mobile-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
     <a href="#contato">Contato</a>
     <a class="mobile-nav-cta" href="#contato"><span>SOLICITE UMA AGENDA</span></a>
   </nav>
@@ -573,7 +575,14 @@
                     placeholder="Explique brevemente o processo atual, o problema e o resultado esperado."></textarea>
         </label>
 
-        <button class="pulse-attention" type="submit">Enviar pelo WhatsApp <span>→</span></button>
+        <div class="form-actions">
+          <button class="form-submit form-submit-whatsapp" type="submit">
+            Enviar pelo WhatsApp <span aria-hidden="true">→</span>
+          </button>
+          <button class="form-submit form-submit-email" id="sendEmailButton" type="button">
+            Enviar pelo e-mail <span aria-hidden="true">→</span>
+          </button>
+        </div>
       </form>
     </div>
   </section>
@@ -650,31 +659,68 @@
   if (year) year.textContent = new Date().getFullYear();
 
   const form = document.getElementById('contactForm');
+  const emailButton = document.getElementById('sendEmailButton');
+
+  function collectContactData() {
+    return {
+      name: document.getElementById('contactName').value.trim(),
+      company: document.getElementById('contactCompany').value.trim(),
+      email: document.getElementById('contactEmail').value.trim(),
+      phone: document.getElementById('contactPhone').value.trim(),
+      solution: document.getElementById('contactSolution').value.trim(),
+      message: document.getElementById('contactMessage').value.trim()
+    };
+  }
+
+  function validateContactForm() {
+    if (!form) return false;
+    if (!form.reportValidity()) return false;
+    return true;
+  }
+
+  function buildMessage(data) {
+    return [
+      'Olá, gostaria de solicitar um orçamento.',
+      '',
+      'Nome: ' + data.name,
+      'Empresa: ' + data.company,
+      'E-mail: ' + data.email,
+      'WhatsApp: ' + (data.phone || 'Não informado'),
+      'Solução selecionada: ' + data.solution,
+      '',
+      'Necessidade:',
+      data.message
+    ].join('
+');
+  }
+
   if (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      if (!validateContactForm()) return;
 
-      const name = document.getElementById('contactName').value.trim();
-      const company = document.getElementById('contactCompany').value.trim();
-      const email = document.getElementById('contactEmail').value.trim();
-      const phone = document.getElementById('contactPhone').value.trim();
-      const solution = document.getElementById('contactSolution').value.trim();
-      const message = document.getElementById('contactMessage').value.trim();
+      const data = collectContactData();
+      const text = buildMessage(data);
+      window.open(
+        'https://wa.me/5511956919990?text=' + encodeURIComponent(text),
+        '_blank',
+        'noopener'
+      );
+    });
+  }
 
-      const text = [
-        'Olá, gostaria de conversar sobre um projeto.',
-        '',
-        'Nome: ' + name,
-        'Empresa: ' + company,
-        'E-mail: ' + email,
-        'WhatsApp: ' + (phone || 'Não informado'),
-        'Solução: ' + solution,
-        '',
-        'Necessidade:',
-        message
-      ].join('\n');
+  if (emailButton) {
+    emailButton.addEventListener('click', function () {
+      if (!validateContactForm()) return;
 
-      window.open('https://wa.me/5511956919990?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      const data = collectContactData();
+      const subject = 'Orçamento (' + data.solution + ') - ' + data.name + ' - ' + data.company;
+      const body = buildMessage(data);
+      const recipients = 'douglas@santanatechsp.com.br,comercial@santanatechsp.com.br';
+
+      window.location.href = 'mailto:' + recipients
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
     });
   }
 })();
