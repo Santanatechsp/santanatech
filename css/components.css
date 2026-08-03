@@ -84,21 +84,36 @@
 .global-header-cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 7px;
+
+  min-width: 174px;
+  min-height: 42px;
+  padding: 10px 13px;
+
   border-radius: 10px;
   background: #071b2d;
   color: #ffffff;
-  font-size: 11px;
+
+  font-size: 10px;
   font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
+.global-header-cta span {
+  display: block;
+  white-space: nowrap;
+}
+
 .global-header-cta img {
-  width: 17px;
-  height: 17px;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
