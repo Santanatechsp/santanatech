@@ -715,8 +715,8 @@
       const data = collectContactData();
       const subject = 'Orçamento (' + data.solution + ') - ' + data.name + ' - ' + data.company;
       const body = buildMessage(data);
-      const primaryRecipient = 'douglas@santanatechsp.com.br';
-      const copyRecipient = 'comercial@santanatechsp.com.br';
+      const primaryRecipient = 'comercial@santanatechsp.com.br';
+      const copyRecipient = 'douglas@santanatechsp.com.br';
 
       window.location.href = 'mailto:' + primaryRecipient
         + '?cc=' + encodeURIComponent(copyRecipient)
