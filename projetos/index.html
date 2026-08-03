@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santana Tech | Projetos e soluções implantadas</title>
-  <meta name="description" content="Conheça os projetos e soluções implantadas pela Santana Tech em inteligência artificial, automação, integrações, dashboards, cloud, documentos, áudio e vídeo.">
+  <title>Projetos e Soluções Implantadas | Santana Tech</title>
+  <meta name="description" content="Conheça projetos da Santana Tech em inteligência artificial, automação, integrações, dashboards, documentos, áudio, vídeo e cloud.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#071b2d">
 
@@ -14,931 +14,395 @@
 
   <link rel="icon" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/projetos/css/projetos.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Santana Tech",
-    "description": "Software house especializada em sistemas personalizados, inteligência artificial, aplicações AWS, integrações e análise de reputação.",
-    "email": "comercial@santanatechsp.com.br",
-    "telephone": "+55 11 95691-9990",
-    "areaServed": "BR"
-  }
-  </script>
+  <!-- O mesmo CSS usado pela home -->
+  <link rel="stylesheet" href="/css/home.css">
+  <!-- Somente os estilos específicos da página Projetos -->
+  <link rel="stylesheet" href="/projetos/css/projetos.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-  <header class="site-header" id="topo">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Santana Tech - Página inicial">
-        <img src="/assets/logo.png" alt="Santana Tech">
-      </a>
+<!-- Mesmo topo da página home -->
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Santana Tech - Página inicial">
+      <img src="/assets/logo.png" alt="Santana Tech">
+    </a>
 
-      <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="/#especialidades">Especialidades</a>
-        <a href="/#reputacao">Análise de Reputação</a>
-        <a href="/#sistemas">Sistemas personalizados</a>
-        <a href="/#ia-aws">IA e AWS</a>
-        <a class="active" href="/projetos/">Projetos</a>
-        <a href="/extras/">Extras</a>
-        <a class="nav-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
-        <a href="/#contato">Contato</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="header-cta pulse-attention agenda-button" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20agendar%20uma%20conversa%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
-          <img class="agenda-whatsapp-icon" src="/assets/whatsapp.png" alt="">
-          <span>SOLICITE UMA AGENDA</span>
-        </a>
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <nav class="mobile-nav" id="mobileMenu" aria-label="Menu móvel" hidden>
+    <nav class="desktop-nav" aria-label="Navegação principal">
       <a href="/#especialidades">Especialidades</a>
       <a href="/#reputacao">Análise de Reputação</a>
       <a href="/#sistemas">Sistemas personalizados</a>
       <a href="/#ia-aws">IA e AWS</a>
       <a href="/projetos/">Projetos</a>
       <a href="/extras/">Extras</a>
-      <a class="mobile-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
+      <a class="nav-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
       <a href="/#contato">Contato</a>
-      <a class="mobile-nav-cta" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20agendar%20uma%20conversa%20sobre%20um%20projeto."><span>SOLICITE UMA AGENDA</span></a>
     </nav>
-  </header>
 
-  <main id="conteudo">
-    <section class="page-hero">
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <span class="eyebrow">Projetos e soluções implantadas</span>
-          <h1>Projetos que transformam <span>operações reais em tecnologia que entrega resultado.</span></h1>
-          <p>
-            Conheça uma seleção de projetos desenvolvidos pela <strong>Santana Tech</strong> nas áreas de
-            <strong>inteligência artificial</strong>, <strong>automação</strong>, <strong>integrações</strong>,
-            <strong>dashboards</strong>, <strong>cloud</strong>, <strong>documentos</strong>, <strong>áudio e vídeo</strong>.
-            A proposta desta página é mostrar, de forma clara e profissional, como uma necessidade operacional
-            pode ser convertida em uma solução tecnológica aplicável, escalável e orientada ao negócio.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="button button-primary" href="#portifolio-projetos">Explorar projetos <span aria-hidden="true">→</span></a>
-            <a class="button button-secondary" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20conhecer%20os%20projetos%20da%20Santana%20Tech." target="_blank" rel="noopener noreferrer">Falar sobre uma necessidade</a>
-          </div>
-
-          <div class="hero-badges" aria-label="Destaques da página">
-            <span>Inteligência Artificial</span>
-            <span>Automação de processos</span>
-            <span>Power BI Embedded</span>
-            <span>Amazon Textract</span>
-            <span>FFmpeg e cloud</span>
-            <span>Captura de redes sociais</span>
-          </div>
-
-          <p class="hero-note">Os nomes e os números apresentados nesta página têm caráter <strong>demonstrativo</strong>, com dados fictícios e adaptação de nomenclaturas para preservar informações sensíveis.</p>
-        </div>
-
-        <aside class="hero-panel" aria-label="Painel executivo demonstrativo de projetos e automações">
-          <div class="panel-top">
-            <div>
-              <small>PORTFÓLIO TECNOLÓGICO</small>
-              <strong>Operação, dados e inteligência conectados</strong>
-            </div>
-            <span class="live-badge"><i></i> DEMONSTRAÇÃO</span>
-          </div>
-
-          <div class="hero-kpi-grid">
-            <article class="hero-kpi-card">
-              <span>PROJETOS ORGANIZADOS</span>
-              <strong>14</strong>
-              <em>cases apresentados nesta página</em>
-            </article>
-            <article class="hero-kpi-card">
-              <span>CATEGORIAS</span>
-              <strong>05</strong>
-              <em>IA, automação, áudio, documentos e dashboards</em>
-            </article>
-            <article class="hero-kpi-card">
-              <span>INTEGRAÇÕES</span>
-              <strong>API</strong>
-              <em>cloud, banco de dados, webhooks e armazenamento</em>
-            </article>
-            <article class="hero-kpi-card">
-              <span>ABORDAGEM</span>
-              <strong>Full stack</strong>
-              <em>da arquitetura à sustentação</em>
-            </article>
-          </div>
-
-          <div class="hero-panel-bar">
-            <header>
-              <span>Fluxo de projeto</span>
-              <span>Diagnóstico → implantação</span>
-            </header>
-            <div class="mini-progress"><i style="width: 91%"></i></div>
-          </div>
-
-          <div class="hero-panel-bar">
-            <header>
-              <span>Valor percebido</span>
-              <span>automação, inteligência e escala</span>
-            </header>
-            <div class="mini-progress"><i style="width: 83%"></i></div>
-          </div>
-
-          <small class="hero-disclaimer">Conteúdo ilustrativo para demonstrar a capacidade de construção de produtos e soluções personalizadas.</small>
-        </aside>
-      </div>
-    </section>
-
-    <section class="dashboard-preview">
-      <div class="container">
-        <div class="dashboard-card" id="demoDashboard">
-          <div class="loader-overlay" aria-hidden="true">
-            <div class="loader-box">
-              <strong>Carregando painel demonstrativo...</strong>
-              <div class="loader-line"></div>
-              <div class="loader-line"></div>
-              <div class="loader-line"></div>
-              <div class="loader-line"></div>
-            </div>
-          </div>
-
-          <div class="dashboard-head">
-            <div class="dashboard-title-group">
-              <h2>Visão demonstrativa de uma plataforma analítica</h2>
-              <p>Inspirado em painéis executivos reais, com dados fictícios, comportamento visual dinâmico e foco em leitura rápida.</p>
-            </div>
-            <div class="dashboard-status">
-              <div>Atualização visual simulada</div>
-              <span>dados demonstrativos carregados agora</span>
-            </div>
-          </div>
-
-          <div class="fake-toolbar">
-            <div class="fake-pill"><small>Cliente</small> Operação Demo <i>⌄</i></div>
-            <div class="fake-pill"><small>Classificação</small> Todas as áreas <i>⌄</i></div>
-            <div class="fake-pill"><small>Período</small> Últimos 30 dias <i>⌄</i></div>
-            <div class="fake-pill"><small>Status</small> Atualizado <i>✓</i></div>
-          </div>
-
-          <div class="metric-grid">
-            <article class="metric-card">
-              <div class="icon green">C</div>
-              <span class="label">Conteúdos processados</span>
-              <strong data-counter="2033">0</strong>
-              <em>visão consolidada</em>
-            </article>
-            <article class="metric-card">
-              <div class="icon cyan">O</div>
-              <span class="label">Online</span>
-              <strong data-counter="1065">0</strong>
-              <em>web e portais</em>
-            </article>
-            <article class="metric-card">
-              <div class="icon blue">R</div>
-              <span class="label">Redes sociais</span>
-              <strong data-counter="921">0</strong>
-              <em>social monitorado</em>
-            </article>
-            <article class="metric-card">
-              <div class="icon orange">A</div>
-              <span class="label">Rádio</span>
-              <strong data-counter="18">0</strong>
-              <em>captação contínua</em>
-            </article>
-            <article class="metric-card">
-              <div class="icon purple">TV</div>
-              <span class="label">TV</span>
-              <strong data-counter="27">0</strong>
-              <em>gravações tratadas</em>
-            </article>
-            <article class="metric-card">
-              <div class="icon red">%</div>
-              <span class="label">Sentimento positivo</span>
-              <strong data-counter="88">0</strong>
-              <em>percentual simulado</em>
-            </article>
-          </div>
-
-          <div class="dashboard-grid">
-            <section class="panel list-panel">
-              <h3>Destaques processados <span class="panel-chip">Top 5</span></h3>
-              <div class="scroll-list">
-                <article class="scroll-item">
-                  <strong>Nova campanha regional amplia presença da marca em mídia especializada</strong>
-                  <span>Portal Estratégia Comunicação</span>
-                </article>
-                <article class="scroll-item">
-                  <strong>Relatório executivo aponta crescimento de percepção positiva no período</strong>
-                  <span>Jornal Mercado em Foco</span>
-                </article>
-                <article class="scroll-item">
-                  <strong>Operação integrada reduz tempo de análise e acelera a entrega aos clientes</strong>
-                  <span>Revista Tecnologia Aplicada</span>
-                </article>
-                <article class="scroll-item">
-                  <strong>Dashboard analítico oferece visão consolidada de mídia, sentimento e audiência</strong>
-                  <span>Canal Comunicação & Dados</span>
-                </article>
-                <article class="scroll-item">
-                  <strong>Integrações por API automatizam etapas críticas do processo operacional</strong>
-                  <span>Portal Inovação Empresarial</span>
-                </article>
-              </div>
-            </section>
-
-            <section class="panel">
-              <h3>Evolução por mídia <span class="panel-chip">últimos 7 dias</span></h3>
-              <canvas id="evolucaoMidia"></canvas>
-            </section>
-
-            <section class="panel">
-              <h3>Nuvem de palavras <span class="panel-chip">63 termos</span></h3>
-              <div class="word-cloud-box" aria-label="Nuvem de palavras demonstrativa">
-                <span style="top:18%; left:18%; font-size:56px; color:#2f9c3e;">Inovação</span>
-                <span style="top:10%; left:60%; font-size:22px; color:#ef5656;">Reputação</span>
-                <span style="top:34%; left:15%; font-size:34px; color:#2e7df1;">Automação</span>
-                <span style="top:44%; left:56%; font-size:24px; color:#ff8b24;">Analytics</span>
-                <span style="top:64%; left:16%; font-size:32px; color:#7b61ff;">Crescimento</span>
-                <span style="top:53%; left:41%; font-size:44px; color:#1bb79e;">Dados</span>
-                <span style="top:72%; left:58%; font-size:20px; color:#20c7c9;">Comunicação</span>
-                <span style="top:26%; left:50%; font-size:18px; color:#44c35f;">Oportunidade</span>
-                <span style="top:66%; left:8%; font-size:18px; color:#f0bb1d;">Estratégia</span>
-                <span style="top:80%; left:42%; font-size:18px; color:#ef5656;">Decisão</span>
-                <span style="top:6%; left:20%; font-size:18px; color:#1bb79e;">Escala</span>
-                <span style="top:50%; left:8%; font-size:16px; color:#ff8b24;">Performance</span>
-              </div>
-            </section>
-
-            <section class="panel">
-              <h3>Análise de sentimentos <span class="panel-chip">fictício</span></h3>
-              <canvas id="sentimentoChart"></canvas>
-              <div class="donut-legend">
-                <div><span><i class="dot" style="background:#59be4d"></i>Positivo</span><strong>88%</strong></div>
-                <div><span><i class="dot" style="background:#ef5656"></i>Negativo</span><strong>7%</strong></div>
-                <div><span><i class="dot" style="background:#f0bb1d"></i>Neutro</span><strong>5%</strong></div>
-              </div>
-            </section>
-          </div>
-
-          <div class="insight-banner">
-            <strong>Insight demonstrativo:</strong>
-            <p>Uma tela como esta valoriza a percepção de produto, facilita a leitura pelo cliente final e reforça a capacidade da Santana Tech em criar <strong>experiências analíticas visuais, intuitivas e orientadas a decisão</strong>.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="portifolio-projetos">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Portfólio organizado por categorias</span>
-          <h2>Projetos apresentados com linguagem clara para times técnicos, comerciais, agências e decisores.</h2>
-          <p>
-            Ao clicar em cada tópico, o visitante encontra uma explicação objetiva do problema,
-            da solução criada, do funcionamento, das tecnologias envolvidas e do valor gerado.
-            Isso fortalece o posicionamento comercial e também melhora a clareza em campanhas,
-            apresentações e anúncios.
-          </p>
-        </div>
-
-        <div class="confidential-note">
-          <strong>Observação importante:</strong> alguns projetos apresentados foram desenvolvidos para uma
-          <strong>empresa nacional de monitoramento e inteligência de mídia</strong>. Por questões de
-          <strong>confidencialidade</strong>, nomes comerciais, credenciais, fluxos sensíveis e volumes operacionais
-          foram adaptados ou omitidos, sem comprometer a compreensão do escopo técnico e do valor do projeto.
-        </div>
-
-        <div class="category-pills" aria-label="Categorias de projetos">
-          <span>Inteligência Artificial</span>
-          <span>Automação e integrações</span>
-          <span>Áudio e vídeo</span>
-          <span>Documentos e OCR</span>
-          <span>Dashboards e dados</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container projects-layout">
-        <aside class="projects-sidebar">
-          <h3>Projetos</h3>
-          <p>Escolha uma categoria ou vá direto ao tópico que deseja mostrar em uma reunião, proposta ou campanha.</p>
-
-          <div class="sidebar-group">
-            <strong>Inteligência Artificial</strong>
-            <div class="sidebar-links">
-              <a href="#analise-ia">Análise automática de conteúdos com IA</a>
-              <a href="#resumos-automaticos">Resumos automáticos de matérias</a>
-              <a href="#titulos-ia">Títulos gerados por IA</a>
-              <a href="#classificacao-ia">Classificação automática de assuntos</a>
-            </div>
-          </div>
-
-          <div class="sidebar-group">
-            <strong>Automação e integrações</strong>
-            <div class="sidebar-links">
-              <a href="#recorte-automatico">Recorte automático de matérias</a>
-              <a href="#modo-leitura">Extração inteligente de conteúdo editorial</a>
-              <a href="#retroativos-api">Busca e recuperação de conteúdos históricos</a>
-              <a href="#captura-redes">Captura automatizada de redes sociais</a>
-            </div>
-          </div>
-
-          <div class="sidebar-group">
-            <strong>Áudio e vídeo</strong>
-            <div class="sidebar-links">
-              <a href="#plataforma-rtv">Plataforma para rádio e TV</a>
-              <a href="#ffmpeg-cloud">Processamento automatizado com FFmpeg</a>
-              <a href="#validacao-gravacoes">Painel de validação de gravações</a>
-            </div>
-          </div>
-
-          <div class="sidebar-group">
-            <strong>Documentos e impressos</strong>
-            <div class="sidebar-links">
-              <a href="#textract-jornais">Extração automática de textos com Amazon Textract</a>
-              <a href="#calculo-impresso">Automação de medições para mídia impressa</a>
-            </div>
-          </div>
-
-          <div class="sidebar-group">
-            <strong>Dados e dashboards</strong>
-            <div class="sidebar-links">
-              <a href="#powerbi-embedded">Power BI Embedded integrado ao sistema</a>
-              <a href="#analise-reputacao-plataforma">Plataforma de análise de reputação</a>
-              <a href="#home-analitica">Painel analítico para clientes</a>
-            </div>
-          </div>
-        </aside>
-
-        <div class="projects-content">
-          <article class="project-card" id="analise-ia">
-            <header>
-              <div>
-                <span class="project-kicker">Inteligência Artificial</span>
-                <h3>Análise automática de conteúdos com IA</h3>
-                <p class="summary">Solução criada para aplicar <strong>análise de sentimento</strong>, <strong>tonalidade</strong>, <strong>contexto</strong> e <strong>justificativas</strong> em grandes volumes de matérias, entregando resultados mais rápidos, consistentes e prontos para uso operacional.</p>
-                <div class="project-meta">
-                  <span>Amazon Bedrock</span>
-                  <span>Regras de negócio</span>
-                  <span>Análise de mídia</span>
-                  <span>IA aplicada</span>
-                </div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-
-            <div class="project-grid">
-              <div>
-                <div class="content-block">
-                  <h4>Desafio</h4>
-                  <p>Transformar a análise de matérias em um processo mais <strong>padronizado</strong>, <strong>escalável</strong> e com menor dependência de interpretação manual, mantendo aderência às regras da operação.</p>
-                </div>
-                <div class="content-block">
-                  <h4>Solução desenvolvida</h4>
-                  <p>Foi construída uma camada de <strong>inteligência artificial integrada ao sistema</strong>, responsável por analisar o conteúdo recebido, identificar o sentimento predominante, classificar a tonalidade, gerar justificativas textuais e devolver o resultado estruturado para uso no fluxo diário.</p>
-                </div>
-                <div class="content-block">
-                  <h4>Principais recursos</h4>
-                  <ul class="capability-list">
-                    <li>Análise de sentimento</li>
-                    <li>Tonalidade positiva, neutra ou negativa</li>
-                    <li>Justificativas contextualizadas</li>
-                    <li>Identificação de assuntos e entidades</li>
-                    <li>Integração dos resultados ao sistema</li>
-                    <li>Validação humana quando necessário</li>
-                  </ul>
-                </div>
-                <div class="content-block">
-                  <h4>Valor percebido</h4>
-                  <p>O projeto reforça a capacidade da Santana Tech em criar soluções de <strong>IA aplicada ao negócio</strong>, e não apenas experimentos isolados. Isso melhora a velocidade de análise, aumenta a consistência e amplia a capacidade de processamento.</p>
-                </div>
-              </div>
-              <div>
-                <div class="architecture-box">
-                  <h4>Fluxo simplificado</h4>
-                  <ul class="flow-steps">
-                    <li><span class="step">01</span> Matéria recebida pelo sistema</li>
-                    <li><span class="step">02</span> Conteúdo enviado ao motor de IA</li>
-                    <li><span class="step">03</span> Análise de sentimento, tonalidade e justificativa</li>
-                    <li><span class="step">04</span> Retorno estruturado ao banco de dados</li>
-                    <li><span class="step">05</span> Disponibilização para consulta e revisão</li>
-                  </ul>
-                </div>
-                <div class="kpi-side-card" style="margin-top:14px;">
-                  <h4>Destaques da solução</h4>
-                  <div class="kpi-mini-grid">
-                    <div class="kpi-mini"><span>Modelo</span><strong>IA</strong><em>integrada ao fluxo</em></div>
-                    <div class="kpi-mini"><span>Entrega</span><strong>API</strong><em>retorno estruturado</em></div>
-                    <div class="kpi-mini"><span>Uso</span><strong>Mídia</strong><em>matérias e conteúdos</em></div>
-                    <div class="kpi-mini"><span>Posicionamento</span><strong>Estratégico</strong><em>com valor comercial</em></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="project-cta">
-              <p>Excelente case para comunicar <strong>análise com IA</strong>, <strong>automação de conteúdo</strong> e <strong>inteligência aplicada à comunicação</strong>.</p>
-              <a class="button button-primary" href="https://wa.me/5511956919990?text=Olá,%20quero%20falar%20sobre%20uma%20solução%20de%20análise%20automática%20de%20conteúdos%20com%20IA." target="_blank" rel="noopener noreferrer">Quero algo parecido</a>
-            </div>
-          </article>
-
-          <article class="project-card" id="resumos-automaticos">
-            <header>
-              <div>
-                <span class="project-kicker">Inteligência Artificial</span>
-                <h3>Resumos automáticos de matérias</h3>
-                <p class="summary">Projeto voltado à <strong>geração automática de resumos</strong> para matérias extensas, tornando a leitura mais rápida e melhorando a entrega de informação para equipes e clientes.</p>
-                <div class="project-meta">
-                  <span>Resumo com IA</span>
-                  <span>Conteúdo editorial</span>
-                  <span>Produtividade</span>
-                </div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Transformar textos longos em uma leitura mais objetiva, mantendo os pontos centrais do conteúdo e evitando perda de contexto.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi criada uma rotina capaz de analisar a matéria e gerar um <strong>resumo claro, curto e útil para consumo executivo</strong>, diretamente dentro da operação.</p></div>
-                <div class="content-block"><h4>Principais benefícios</h4><ul class="project-benefits"><li>Leitura mais rápida</li><li>Padronização da síntese</li><li>Entrega mais estratégica</li><li>Melhor experiência para o cliente</li></ul></div>
-              </div>
-              <div>
-                <div class="architecture-box"><h4>Aplicação prática</h4><p>Ideal para plataformas que trabalham com <strong>monitoramento</strong>, <strong>clipping</strong>, <strong>reputação</strong>, <strong>documentos</strong> ou qualquer fluxo que precise transformar informação extensa em entendimento rápido.</p></div>
-                <div class="kpi-side-card" style="margin-top:14px;"><h4>Tecnologias e contexto</h4><ul class="tech-stack"><li>Amazon Bedrock</li><li>Regras de negócio</li><li>Integração por API</li><li>Banco de dados</li></ul></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" id="titulos-ia">
-            <header>
-              <div>
-                <span class="project-kicker">Inteligência Artificial</span>
-                <h3>Títulos gerados por IA para rádio e TV</h3>
-                <p class="summary">Solução desenvolvida para criar <strong>títulos contextuais</strong> para conteúdos transcritos de rádio e televisão, melhorando identificação, leitura e classificação do material.</p>
-                <div class="project-meta"><span>Transcrição</span><span>Títulos automáticos</span><span>RTV</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Conteúdos de áudio e vídeo transcritos nem sempre apresentam um título adequado para representação do assunto principal.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi implementada uma lógica de IA capaz de ler a transcrição, entender o contexto e gerar um <strong>título representativo e mais profissional</strong> para o conteúdo.</p></div>
-                <div class="content-block"><h4>Resultados de valor</h4><p>Melhora a navegação na plataforma, agiliza o trabalho operacional e aumenta o valor percebido na apresentação do conteúdo para o cliente final.</p></div>
-              </div>
-              <div>
-                <div class="architecture-box"><h4>Onde esse projeto brilha</h4><ul class="flow-steps"><li><span class="step">01</span> Rádio e TV monitorados</li><li><span class="step">02</span> Transcrição disponível</li><li><span class="step">03</span> IA entende o assunto principal</li><li><span class="step">04</span> Título é gerado automaticamente</li></ul></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" id="classificacao-ia">
-            <header>
-              <div>
-                <span class="project-kicker">Inteligência Artificial</span>
-                <h3>Classificação automática de assuntos e etiquetas</h3>
-                <p class="summary">Projeto de organização automática de matérias por <strong>assuntos</strong>, <strong>temas</strong> e <strong>etiquetas operacionais</strong>, reduzindo trabalho manual e garantindo consistência.</p>
-                <div class="project-meta"><span>Etiquetas automáticas</span><span>Temas</span><span>Organização inteligente</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Classificar manualmente grandes volumes de matérias por tema, pessoa, evento ou assunto específico consome tempo e aumenta o risco de inconsistência.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi criada uma rotina de IA que analisa o texto e aplica automaticamente as <strong>etiquetas compatíveis com o contexto</strong>, de acordo com critérios pré-definidos para cada operação.</p></div>
-                <div class="content-block"><h4>Benefícios comerciais</h4><ul class="project-benefits"><li>Mais padronização</li><li>Escala operacional</li><li>Melhor organização</li><li>Busca e filtragem aprimoradas</li></ul></div>
-              </div>
-              <div><div class="architecture-box"><h4>Mensagem forte para divulgação</h4><p>Esse é um case muito útil para posicionar a Santana Tech como parceira em <strong>classificação inteligente</strong>, <strong>automação de conteúdo</strong> e <strong>estruturação de informação</strong>.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="recorte-automatico">
-            <header>
-              <div>
-                <span class="project-kicker">Automação e integrações</span>
-                <h3>Recorte automático de matérias</h3>
-                <p class="summary">Solução para identificar, separar e preparar automaticamente o conteúdo relevante de uma matéria, acelerando a entrega e reduzindo ajustes operacionais.</p>
-                <div class="project-meta"><span>Recorte automático</span><span>Produtividade operacional</span><span>Conteúdo preparado</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>O processo de separar visualmente o que deve ser entregue ao cliente exigia etapas manuais e repetitivas.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi construída uma automação capaz de reconhecer a área útil da matéria, gerar o recorte e vinculá-lo ao fluxo da plataforma, reduzindo tempo e retrabalho.</p></div>
-                <div class="content-block"><h4>Valor do projeto</h4><p>Mostra domínio sobre <strong>automação operacional</strong>, preparação de conteúdo e construção de soluções que atuam diretamente no dia a dia da equipe.</p></div>
-              </div>
-              <div><div class="kpi-side-card"><h4>Ganhos entregues</h4><div class="kpi-mini-grid"><div class="kpi-mini"><span>Tempo</span><strong>- etapas</strong><em>menos intervenção manual</em></div><div class="kpi-mini"><span>Entrega</span><strong>Mais rápida</strong><em>fluxo mais eficiente</em></div><div class="kpi-mini"><span>Padrão</span><strong>Maior</strong><em>menos variação visual</em></div><div class="kpi-mini"><span>Escala</span><strong>Operacional</strong><em>mais volume com controle</em></div></div></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="modo-leitura">
-            <header>
-              <div>
-                <span class="project-kicker">Automação e integrações</span>
-                <h3>Extração inteligente de conteúdo editorial</h3>
-                <p class="summary">Automação que captura o <strong>texto principal de uma matéria</strong>, elimina ruídos de página e devolve o conteúdo formatado, limpo e pronto para leitura e processamento.</p>
-                <div class="project-meta"><span>Modo leitura</span><span>Extração de texto</span><span>Formatação editorial</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Sites jornalísticos misturam menus, anúncios, recomendações e blocos paralelos que dificultam a extração do conteúdo real da matéria.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>A solução acessa a página, identifica o bloco editorial principal, remove elementos não relevantes e entrega o texto organizado, com estrutura compatível para leitura, análise e armazenamento.</p></div>
-                <div class="content-block"><h4>Palavras-chave fortes</h4><ul class="capability-list"><li>Extração automática de texto</li><li>Conteúdo editorial estruturado</li><li>Leitura automatizada</li><li>Dados prontos para IA</li></ul></div>
-              </div>
-              <div><div class="architecture-box"><h4>Fluxo</h4><ul class="flow-steps"><li><span class="step">01</span> URL da matéria recebida</li><li><span class="step">02</span> Conteúdo principal identificado</li><li><span class="step">03</span> Ruídos removidos</li><li><span class="step">04</span> Texto formatado salvo no sistema</li></ul></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="retroativos-api">
-            <header>
-              <div>
-                <span class="project-kicker">Automação e integrações</span>
-                <h3>Busca e recuperação de conteúdos históricos</h3>
-                <p class="summary">Integração personalizada para consultar uma plataforma externa, localizar matérias antigas e trazer os conteúdos automaticamente para o ambiente operacional.</p>
-                <div class="project-meta"><span>Integração externa</span><span>Consulta retroativa</span><span>Conteúdo histórico</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Localizar conteúdos retroativos em fornecedores externos de forma manual reduz produtividade e dificulta a rastreabilidade.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>A Santana Tech criou uma função integrada ao sistema para realizar consultas, recuperar conteúdos históricos, estruturar os dados e registrar os resultados para uso imediato.</p></div>
-                <div class="content-block"><h4>Benefícios</h4><ul class="project-benefits"><li>Menos buscas manuais</li><li>Histórico centralizado</li><li>Maior rastreabilidade</li><li>Integração ao fluxo da operação</li></ul></div>
-              </div>
-              <div><div class="kpi-side-card"><h4>Mensagem comercial</h4><p>Esse projeto evidencia experiência da Santana Tech em <strong>integração com APIs de terceiros</strong>, sincronização de dados e criação de funcionalidades úteis para operações intensivas em informação.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="captura-redes">
-            <header>
-              <div>
-                <span class="project-kicker">Automação e integrações</span>
-                <h3>Captura automatizada de publicações em redes sociais</h3>
-                <p class="summary">Arquitetura criada para automatizar a captura de conteúdos sociais, envolvendo <strong>banco de dados</strong>, <strong>API de orquestração</strong>, <strong>proxies</strong>, <strong>gerenciamento de cookies e sessões</strong>, integração com <strong>ScreenshotAPI</strong> e armazenamento no <strong>Amazon S3</strong>.</p>
-                <div class="project-meta"><span>API própria</span><span>Screenshot automático</span><span>Amazon S3</span><span>Redes sociais</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Capturar publicações em redes sociais de forma estável exige controle sobre sessão, autenticação, bloqueios e retorno consistente da imagem final.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi criada uma <strong>API personalizada</strong> que consulta no banco os registros a serem processados, encaminha a solicitação por uma infraestrutura de <strong>proxies e sessões autenticadas</strong>, integra a uma API especializada em screenshot, recebe a captura e a armazena em nuvem. Depois disso, a imagem é vinculada ao sistema e devolvida ao fluxo operacional.</p></div>
-                <div class="content-block"><h4>Benefícios estratégicos</h4><ul class="project-benefits"><li>Capturas automáticas e rastreáveis</li><li>Menor dependência de processos manuais</li><li>Integração ao sistema central</li><li>Armazenamento organizado em cloud</li></ul></div>
-              </div>
-              <div>
-                <div class="architecture-box">
-                  <h4>Fluxo da arquitetura</h4>
-                  <ul class="flow-steps">
-                    <li><span class="step">01</span> Banco de dados identifica o que precisa ser capturado</li>
-                    <li><span class="step">02</span> API de orquestração prepara o processamento</li>
-                    <li><span class="step">03</span> Proxies e gerenciamento de sessão entram em ação</li>
-                    <li><span class="step">04</span> ScreenshotAPI gera a captura solicitada</li>
-                    <li><span class="step">05</span> Imagem recebida é salva no Amazon S3</li>
-                    <li><span class="step">06</span> Sistema recebe o retorno pronto para uso</li>
-                  </ul>
-                </div>
-                <div class="kpi-side-card" style="margin-top:14px;"><h4>Tecnologias envolvidas</h4><ul class="tech-stack"><li>API REST</li><li>Python</li><li>Proxies residenciais</li><li>Cookies e sessões</li><li>ScreenshotAPI</li><li>Amazon S3</li><li>Banco de dados</li></ul></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" id="plataforma-rtv">
-            <header>
-              <div>
-                <span class="project-kicker">Áudio e vídeo</span>
-                <h3>Plataforma para captura, transcrição e gestão de conteúdos de rádio e TV</h3>
-                <p class="summary">Estrutura criada para conectar <strong>gravação</strong>, <strong>transcrição</strong>, <strong>conteúdos retroativos</strong>, <strong>IA</strong> e <strong>sistema operacional</strong> em um fluxo contínuo para rádio e televisão.</p>
-                <div class="project-meta"><span>RTV</span><span>Transcrição</span><span>Integração</span><span>Cloud</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi construída uma solução integrada para gerenciar conteúdos de rádio e TV, desde a entrada do arquivo ou stream até sua transcrição, busca, classificação e disponibilização dentro do sistema.</p></div>
-                <div class="content-block"><h4>Componentes da plataforma</h4><ul class="capability-list"><li>Integrador RTV</li><li>Retroativo RTV</li><li>Busca de conteúdos históricos</li><li>Transcrição de áudio e vídeo</li><li>Títulos gerados por IA</li><li>APIs e banco de dados</li></ul></div>
-                <div class="content-block"><h4>Importância comercial</h4><p>Mostra capacidade de desenvolver <strong>ecossistemas completos</strong>, unindo infraestrutura, lógica de processamento, inteligência e camada operacional para o usuário final.</p></div>
-              </div>
-              <div><div class="architecture-box"><h4>Visão simplificada</h4><ul class="flow-steps"><li><span class="step">01</span> Conteúdo captado</li><li><span class="step">02</span> Processamento e armazenamento</li><li><span class="step">03</span> Transcrição disponível</li><li><span class="step">04</span> IA e títulos automáticos</li><li><span class="step">05</span> Conteúdo acessível no sistema</li></ul></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="ffmpeg-cloud">
-            <header>
-              <div>
-                <span class="project-kicker">Áudio e vídeo</span>
-                <h3>Processamento automatizado de áudio e vídeo em cloud</h3>
-                <p class="summary">Infraestrutura em evolução para <strong>capturar</strong>, <strong>processar</strong>, <strong>converter</strong> e <strong>organizar arquivos multimídia</strong> em ambiente cloud, com APIs, banco de dados e controle de status.</p>
-                <div class="project-meta"><span>FFmpeg</span><span>Cloud</span><span>API própria</span><span>Processamento multimídia</span></div>
-              </div>
-              <span class="project-status status-evolution">Em evolução</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Escopo do projeto</h4><p>A Santana Tech está desenvolvendo uma estrutura para lidar com streams e arquivos de áudio e vídeo, processando, convertendo e organizando o conteúdo automaticamente em nuvem.</p></div>
-                <div class="content-block"><h4>Recursos previstos e implantados</h4><ul class="capability-list"><li>Gravação programada</li><li>Conversão de formatos</li><li>Extração de áudio</li><li>Segmentação e organização</li><li>Integração com sistema</li><li>Controle de status e logs</li></ul></div>
-              </div>
-              <div><div class="kpi-side-card"><h4>Por que esse projeto impressiona?</h4><p>Porque demonstra domínio sobre <strong>infraestrutura multimídia</strong>, <strong>orquestração técnica</strong>, <strong>processamento em escala</strong> e construção de soluções com forte camada operacional.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="validacao-gravacoes">
-            <header>
-              <div>
-                <span class="project-kicker">Áudio e vídeo</span>
-                <h3>Painel de controle e validação de gravações</h3>
-                <p class="summary">Tela operacional criada para que usuários visualizem vídeo, ouçam áudio e validem se os arquivos gravados foram produzidos corretamente antes das próximas etapas do fluxo.</p>
-                <div class="project-meta"><span>Validação operacional</span><span>Vídeo e áudio</span><span>Controle de qualidade</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi criada uma interface dedicada à validação dos arquivos gravados, permitindo que a equipe confira conteúdo, duração, canal, áudio e outras informações antes de aprovar ou solicitar reprocessamento.</p></div>
-                <div class="content-block"><h4>Funcionalidades principais</h4><ul class="project-benefits"><li>Visualização do vídeo</li><li>Reprodução do áudio</li><li>Conferência de gravação correta</li><li>Validação operacional</li><li>Registro de falhas</li><li>Apoio ao reprocessamento</li></ul></div>
-              </div>
-              <div><div class="architecture-box"><h4>Valor para o negócio</h4><p>Esse projeto mostra preocupação com <strong>governança</strong>, <strong>controle de qualidade</strong> e usabilidade para quem opera a solução no dia a dia, algo muito valorizado por clientes corporativos.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="textract-jornais">
-            <header>
-              <div>
-                <span class="project-kicker">Documentos e impressos</span>
-                <h3>Extração automática de textos de jornais e documentos</h3>
-                <p class="summary">Projeto de processamento com <strong>Amazon Textract</strong> para extrair textos de páginas de jornais e documentos, organizar o conteúdo e prepará-lo para busca, análise e classificação.</p>
-                <div class="project-meta"><span>Amazon Textract</span><span>OCR</span><span>Jornais</span><span>Documentos</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Extrair texto útil de documentos e páginas de jornais exige OCR com boa estruturação e integração ao restante do fluxo operacional.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi criada uma esteira que recebe os arquivos, envia o material ao Textract, organiza os blocos reconhecidos e grava o retorno de forma útil para processamento posterior.</p></div>
-                <div class="content-block"><h4>Aplicações de valor</h4><ul class="capability-list"><li>Extração de texto de jornais</li><li>OCR de documentos</li><li>Preparação para IA</li><li>Integração com banco de dados</li><li>Armazenamento em nuvem</li></ul></div>
-              </div>
-              <div><div class="architecture-box"><h4>Mensagem forte para anúncios</h4><p><strong>Extração automática de textos</strong>, <strong>digitalização inteligente</strong>, <strong>OCR em cloud</strong> e <strong>automação documental</strong> são termos que comunicam muito bem esse projeto para públicos técnicos e comerciais.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="calculo-impresso">
-            <header>
-              <div>
-                <span class="project-kicker">Documentos e impressos</span>
-                <h3>Automação de medições e cálculos para mídia impressa</h3>
-                <p class="summary">Ferramenta criada para auxiliar em <strong>medições</strong>, <strong>cálculos operacionais</strong> e tratamento de variáveis relacionadas a páginas, dimensões e critérios de mídia impressa.</p>
-                <div class="project-meta"><span>Semiautomático</span><span>Mídia impressa</span><span>Produtividade</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>O projeto foi pensado para reduzir cálculos manuais, aumentar a padronização dos critérios e manter capacidade de validação pela equipe sempre que necessário.</p></div>
-                <div class="content-block"><h4>O que comunica bem</h4><p>Mostra habilidade em desenvolver funcionalidades de nicho, adaptadas a regras específicas do negócio e orientadas à <strong>eficiência operacional</strong>.</p></div>
-              </div>
-              <div><div class="kpi-side-card"><h4>Destaques</h4><ul class="tech-stack"><li>Regras personalizadas</li><li>Apoio à validação humana</li><li>Integração ao sistema</li><li>Menos retrabalho</li></ul></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="powerbi-embedded">
-            <header>
-              <div>
-                <span class="project-kicker">Dados e dashboards</span>
-                <h3>Power BI Embedded integrado ao sistema</h3>
-                <p class="summary">Implantação de <strong>dashboards Power BI incorporados ao sistema</strong>, com carregamento dentro da plataforma, autenticação e navegação por páginas para uma experiência unificada.</p>
-                <div class="project-meta"><span>Power BI Embedded</span><span>Iframe</span><span>Paginação</span><span>Visualização integrada</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Desafio</h4><p>Exibir indicadores e relatórios sem obrigar o usuário a sair da plataforma ou acessar uma ferramenta isolada.</p></div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>A Santana Tech integrou a API do Power BI Embedded ao sistema, permitindo que os dashboards sejam apresentados diretamente na interface principal, em ambiente autenticado, com paginação e navegação entre relatórios.</p></div>
-                <div class="content-block"><h4>Benefícios claros</h4><ul class="project-benefits"><li>Relatórios no próprio sistema</li><li>Experiência mais profissional</li><li>Menos alternância entre plataformas</li><li>Maior valor percebido pelo cliente</li></ul></div>
-              </div>
-              <div><div class="architecture-box"><h4>Resumo da entrega</h4><ul class="flow-steps"><li><span class="step">01</span> Usuário acessa a plataforma autenticada</li><li><span class="step">02</span> Dashboard Embedded é carregado</li><li><span class="step">03</span> Navegação entre páginas do relatório</li><li><span class="step">04</span> Indicadores disponíveis sem sair do sistema</li></ul></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="analise-reputacao-plataforma">
-            <header>
-              <div>
-                <span class="project-kicker">Dados e dashboards</span>
-                <h3>Plataforma de análise de reputação e inteligência de mídia</h3>
-                <p class="summary">Projeto para transformar matérias monitoradas em uma visão estratégica com <strong>sentimento</strong>, <strong>exposição</strong>, <strong>temas</strong>, <strong>riscos</strong>, <strong>oportunidades</strong> e leitura reputacional.</p>
-                <div class="project-meta"><span>Reputação</span><span>Indicadores</span><span>Inteligência de mídia</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>Foi estruturada uma camada de análise reputacional combinando conteúdo, classificações, inteligência artificial e visualização para apoiar times de comunicação, marketing e gestão.</p></div>
-                <div class="content-block"><h4>O que a solução entrega</h4><ul class="capability-list"><li>Indicadores de sentimento</li><li>Tonalidade e justificativas</li><li>Temas e entidades</li><li>Gráficos e comparativos</li><li>Leitura executiva</li><li>Visão histórica</li></ul></div>
-              </div>
-              <div><div class="kpi-side-card"><h4>Mensagem comercial poderosa</h4><p>Esse projeto posiciona a Santana Tech como parceira em <strong>análise de reputação</strong>, <strong>inteligência de comunicação</strong> e produtos de valor para áreas corporativas e agências.</p></div></div>
-            </div>
-          </article>
-
-          <article class="project-card" id="home-analitica">
-            <header>
-              <div>
-                <span class="project-kicker">Dados e dashboards</span>
-                <h3>Painel analítico para acompanhamento de resultados</h3>
-                <p class="summary">Página inicial orientada a dados, com <strong>gráficos</strong>, <strong>indicadores</strong>, <strong>cards visuais</strong> e leitura rápida dos resultados, projetada para melhorar a experiência do cliente.</p>
-                <div class="project-meta"><span>Home analítica</span><span>Indicadores visuais</span><span>Leitura executiva</span></div>
-              </div>
-              <span class="project-status status-live">Implantado</span>
-            </header>
-            <div class="project-grid">
-              <div>
-                <div class="content-block"><h4>Solução desenvolvida</h4><p>A Santana Tech criou uma página inicial com visão analítica, reunindo gráficos, volumetria, top veículos, audiências, nuvem de palavras e outros elementos para facilitar a leitura do cenário pelo cliente final.</p></div>
-                <div class="content-block"><h4>Por que isso chama atenção no site?</h4><p>Porque mostra capacidade de unir <strong>produto</strong>, <strong>dados</strong>, <strong>design de informação</strong> e <strong>usabilidade</strong>. É exatamente esse tipo de visual que aumenta a percepção de valor de uma solução.</p></div>
-              </div>
-              <div><div class="architecture-box"><h4>O que este projeto comunica</h4><ul class="flow-steps"><li><span class="step">01</span> Dados consolidados</li><li><span class="step">02</span> Indicadores processados</li><li><span class="step">03</span> Visualização clara e amigável</li><li><span class="step">04</span> Mais entendimento para o cliente</li></ul></div></div>
-            </div>
-            <div class="project-cta">
-              <p>Se você gostou do painel demonstrativo do topo desta página, este é o tipo de projeto que sustenta visualmente aquela experiência.</p>
-              <a class="button button-primary" href="https://wa.me/5511956919990?text=Olá,%20quero%20falar%20sobre%20um%20painel%20analítico%20para%20meu%20sistema." target="_blank" rel="noopener noreferrer">Quero um painel assim</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="container cta-band-inner">
-        <div>
-          <h2>Tem uma operação complexa e precisa transformar isso em sistema, automação, dashboard ou IA?</h2>
-          <p>
-            A Santana Tech pode estruturar a solução certa para o seu cenário, desde o diagnóstico da operação até a implantação,
-            integração, suporte e evolução contínua. Se preferir, podemos começar por um <strong>módulo prioritário</strong>,
-            uma <strong>prova de conceito</strong> ou um <strong>protótipo funcional</strong>.
-          </p>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="button button-primary" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20apresentar%20uma%20necessidade%20para%20a%20Santana%20Tech." target="_blank" rel="noopener noreferrer">Falar sobre um projeto</a>
-          <a class="button button-secondary" href="mailto:comercial@santanatechsp.com.br?subject=Quero%20conhecer%20projetos%20da%20Santana%20Tech">Enviar e-mail</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>© <span id="currentYear"></span> <strong>Santana Tech</strong>. Projetos e soluções personalizadas.</div>
-      <div>Atendimento nacional • Sistemas personalizados • IA • AWS • Integrações</div>
+    <div class="header-actions">
+      <a class="header-cta pulse-attention agenda-button" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20agendar%20uma%20conversa%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
+        <img class="agenda-whatsapp-icon" src="/assets/whatsapp.png" alt="">
+        <span>SOLICITE UMA AGENDA</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </footer>
+  </div>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+  <nav class="mobile-nav" id="mobileMenu" aria-label="Menu móvel" hidden>
+    <a href="/#especialidades">Especialidades</a>
+    <a href="/#reputacao">Análise de Reputação</a>
+    <a href="/#sistemas">Sistemas personalizados</a>
+    <a href="/#ia-aws">IA e AWS</a>
+    <a href="/projetos/">Projetos</a>
+    <a href="/extras/">Extras</a>
+    <a class="mobile-dashboard pulse-attention" href="/demo-analise-reputacao/">Ver Dashboard</a>
+    <a href="/#contato">Contato</a>
+    <a class="mobile-nav-cta" href="/#contato"><span>SOLICITE UMA AGENDA</span></a>
+  </nav>
+</header>
 
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener('click', () => {
-        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!isOpen));
-        mobileMenu.hidden = isOpen;
-        document.body.classList.toggle('menu-open', !isOpen);
+<main id="conteudo">
+  <section class="projects-hero">
+    <div class="projects-grid-bg" aria-hidden="true"></div>
+    <div class="container projects-hero-layout">
+      <div class="projects-hero-copy">
+        <span class="eyebrow">Projetos e soluções implantadas</span>
+        <h1>Tecnologia aplicada a <span>operações reais.</span></h1>
+        <p>
+          Conheça projetos desenvolvidos pela Santana Tech em
+          <strong>inteligência artificial</strong>, <strong>automação</strong>,
+          <strong>integrações</strong>, <strong>dashboards</strong>,
+          <strong>documentos</strong>, <strong>áudio e vídeo</strong>.
+          Primeiro você vê o projeto. Os detalhes aparecem somente quando desejar aprofundar.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#lista-projetos">Conhecer os projetos <span>→</span></a>
+          <a class="button button-secondary" href="/#contato">Falar sobre uma necessidade</a>
+        </div>
+
+        <div class="hero-tags">
+          <span>IA aplicada</span>
+          <span>Automação</span>
+          <span>APIs</span>
+          <span>AWS</span>
+          <span>Dashboards</span>
+        </div>
+      </div>
+
+      <div class="projects-hero-visual" aria-label="Fluxo demonstrativo de uma solução personalizada">
+        <div class="projects-visual-top">
+          <div><small>SOLUÇÃO PERSONALIZADA</small><strong>Do problema à operação</strong></div>
+          <span><i></i> PROJETO REAL</span>
+        </div>
+        <div class="projects-flow">
+          <article><b>01</b><div><small>ENTENDIMENTO</small><strong>Necessidade do negócio</strong></div></article>
+          <article><b>02</b><div><small>CONSTRUÇÃO</small><strong>Sistema, API ou automação</strong></div></article>
+          <article><b>03</b><div><small>INTEGRAÇÃO</small><strong>Dados e processos conectados</strong></div></article>
+          <article><b>04</b><div><small>RESULTADO</small><strong>Solução disponível para uso</strong></div></article>
+        </div>
+        <small class="projects-visual-note">Os nomes comerciais dos clientes e informações sensíveis foram preservados.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-intro section-light" id="lista-projetos">
+    <div class="container">
+      <div class="section-heading centered projects-heading">
+        <span class="eyebrow">Selecione uma área</span>
+        <h2>Encontre rapidamente o projeto que deseja conhecer.</h2>
+        <p>Os títulos ficam em evidência. Clique em um projeto para ver o desafio, a solução criada, o funcionamento e as tecnologias utilizadas.</p>
+      </div>
+
+      <nav class="project-category-nav" aria-label="Categorias de projetos">
+        <a href="#categoria-ia"><span>IA</span><strong>Inteligência Artificial</strong></a>
+        <a href="#categoria-automacao"><span>API</span><strong>Automação e integrações</strong></a>
+        <a href="#categoria-rtv"><span>AV</span><strong>Áudio e vídeo</strong></a>
+        <a href="#categoria-documentos"><span>OCR</span><strong>Documentos e impressos</strong></a>
+        <a href="#categoria-dados"><span>BI</span><strong>Dashboards e dados</strong></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="projects-showcase">
+    <div class="container">
+      <div class="showcase-copy">
+        <span class="eyebrow">Projeto em destaque</span>
+        <h2>Painéis analíticos integrados ao sistema</h2>
+        <p>
+          Experiências visuais com <strong>indicadores</strong>, <strong>gráficos</strong>,
+          <strong>sentimento</strong>, <strong>audiência</strong> e <strong>informações executivas</strong>,
+          criadas para facilitar a leitura dos resultados pelos clientes.
+        </p>
+        <a href="#home-analitica">Ver detalhes deste projeto →</a>
+      </div>
+
+      <div class="mini-dashboard" id="miniDashboard">
+        <div class="mini-dashboard-loader"><span></span><p>Carregando demonstração...</p></div>
+        <div class="mini-dashboard-top">
+          <div><small>VISÃO GERAL</small><strong>Painel demonstrativo</strong></div>
+          <span>Dados fictícios</span>
+        </div>
+        <div class="mini-kpis">
+          <article><i class="kpi-green">C</i><small>Conteúdos</small><strong data-value="2033">0</strong></article>
+          <article><i class="kpi-cyan">O</i><small>Online</small><strong data-value="1065">0</strong></article>
+          <article><i class="kpi-blue">R</i><small>Redes sociais</small><strong data-value="921">0</strong></article>
+          <article><i class="kpi-purple">%</i><small>Positivo</small><strong data-value="88" data-percent="true">0</strong></article>
+        </div>
+        <div class="mini-dashboard-body">
+          <div class="mini-chart">
+            <div class="mini-chart-title">Evolução por mídia</div>
+            <svg viewBox="0 0 520 180" role="img" aria-label="Gráfico demonstrativo">
+              <g class="grid-lines"><line x1="30" y1="35" x2="500" y2="35"/><line x1="30" y1="75" x2="500" y2="75"/><line x1="30" y1="115" x2="500" y2="115"/><line x1="30" y1="155" x2="500" y2="155"/></g>
+              <polyline class="line-cyan" points="30,145 70,55 105,125 145,118 185,50 225,130 270,100 310,92 350,134 395,90 440,112 500,38"/>
+              <polyline class="line-blue" points="30,150 70,105 105,135 145,142 185,78 225,142 270,124 310,60 350,116 395,135 440,82 500,112"/>
+            </svg>
+          </div>
+          <div class="mini-sentiment">
+            <div class="donut"><strong>88%</strong><small>positivo</small></div>
+            <div class="sentiment-list"><span><i class="positive"></i>Positivo</span><span><i class="negative"></i>Negativo</span><span><i class="neutral"></i>Neutro</span></div>
+          </div>
+        </div>
+        <small class="mini-dashboard-note">Interface demonstrativa com dados fictícios.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-list section-light">
+    <div class="container">
+
+      <section class="project-category" id="categoria-ia">
+        <header class="category-heading">
+          <span class="category-icon">IA</span>
+          <div><small>INTELIGÊNCIA ARTIFICIAL</small><h2>IA aplicada a conteúdo e operação</h2><p>Análises, resumos, títulos e classificações integradas ao fluxo real do sistema.</p></div>
+        </header>
+
+        <div class="project-accordion">
+          <details class="project-item" id="analise-ia">
+            <summary><div><span>01</span><h3>Análise automática de conteúdos com IA</h3><p>Sentimento, tonalidade, contexto e justificativas.</p></div><i>+</i></summary>
+            <div class="project-detail">
+              <div><h4>O desafio</h4><p>Analisar grandes volumes de matérias com rapidez e manter critérios consistentes de avaliação.</p></div>
+              <div><h4>A solução criada</h4><p>Uma camada de <strong>inteligência artificial integrada ao sistema</strong> que recebe o conteúdo, identifica <strong>sentimento</strong> e <strong>tonalidade</strong>, gera uma <strong>justificativa contextualizada</strong> e devolve o resultado estruturado para o fluxo operacional.</p></div>
+              <div><h4>Tecnologias e recursos</h4><ul><li>Amazon Bedrock</li><li>API integrada</li><li>Banco de dados</li><li>Regras de negócio</li><li>Revisão humana quando necessária</li></ul></div>
+            </div>
+          </details>
+
+          <details class="project-item" id="resumos-automaticos">
+            <summary><div><span>02</span><h3>Resumos automáticos de matérias</h3><p>Síntese clara de conteúdos extensos com inteligência artificial.</p></div><i>+</i></summary>
+            <div class="project-detail">
+              <div><h4>O desafio</h4><p>Facilitar o consumo de matérias longas sem perder os pontos centrais do conteúdo.</p></div>
+              <div><h4>A solução criada</h4><p>Uma rotina de IA que interpreta a matéria e gera um <strong>resumo objetivo</strong>, pronto para leitura executiva e entrega dentro da plataforma.</p></div>
+              <div><h4>Valor entregue</h4><ul><li>Leitura mais rápida</li><li>Padronização dos resumos</li><li>Mais valor para o cliente final</li></ul></div>
+            </div>
+          </details>
+
+          <details class="project-item" id="titulos-ia">
+            <summary><div><span>03</span><h3>Títulos gerados por IA para rádio e TV</h3><p>Títulos contextuais produzidos a partir da transcrição.</p></div><i>+</i></summary>
+            <div class="project-detail">
+              <div><h4>A solução criada</h4><p>A IA analisa a transcrição, identifica o assunto central e cria um <strong>título representativo</strong>, melhorando a organização e a apresentação do conteúdo.</p></div>
+              <div><h4>Aplicação</h4><ul><li>Conteúdos de rádio</li><li>Conteúdos de televisão</li><li>Transcrições automáticas</li></ul></div>
+            </div>
+          </details>
+
+          <details class="project-item" id="classificacao-ia">
+            <summary><div><span>04</span><h3>Classificação automática de assuntos e etiquetas</h3><p>Organização de matérias por temas definidos para cada operação.</p></div><i>+</i></summary>
+            <div class="project-detail">
+              <div><h4>A solução criada</h4><p>Uma rotina que interpreta o texto e aplica automaticamente <strong>assuntos</strong>, <strong>temas</strong> e <strong>etiquetas específicas</strong>, reduzindo trabalho manual e aumentando a consistência.</p></div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="project-category" id="categoria-automacao">
+        <header class="category-heading">
+          <span class="category-icon">API</span>
+          <div><small>AUTOMAÇÃO E INTEGRAÇÕES</small><h2>Processos conectados e menos trabalho manual</h2><p>APIs e automações construídas para eliminar etapas repetitivas e integrar fornecedores, sistemas e armazenamento.</p></div>
+        </header>
+
+        <div class="project-accordion">
+          <details class="project-item" id="recorte-automatico">
+            <summary><div><span>01</span><h3>Recorte automático de matérias</h3><p>Identificação e preparação automática do conteúdo relevante.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Automação capaz de localizar a área útil da matéria, gerar o recorte e vinculá-lo ao fluxo da plataforma, reduzindo tempo e retrabalho.</p></div></div>
+          </details>
+
+          <details class="project-item" id="modo-leitura">
+            <summary><div><span>02</span><h3>Extração inteligente de conteúdo editorial</h3><p>Captura do texto principal de páginas de notícias, limpo e formatado.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>O sistema acessa a página, reconhece o <strong>conteúdo editorial principal</strong>, remove menus, anúncios e recomendações, e devolve o texto organizado para leitura, análise e armazenamento.</p></div><div><h4>Aplicações</h4><ul><li>Modo leitura</li><li>Extração de matérias</li><li>Preparação de dados para IA</li></ul></div></div>
+          </details>
+
+          <details class="project-item" id="retroativos-api">
+            <summary><div><span>03</span><h3>Busca e recuperação de conteúdos históricos</h3><p>Integração com fornecedor externo para localizar matérias retroativas.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma função integrada ao sistema consulta a API externa, recupera conteúdos históricos e registra os resultados automaticamente no ambiente operacional.</p></div></div>
+          </details>
+
+          <details class="project-item featured-project" id="captura-redes">
+            <summary><div><span>04</span><h3>Captura automatizada de publicações em redes sociais</h3><p>API própria, proxies, sessões, ScreenshotAPI e Amazon S3.</p></div><i>+</i></summary>
+            <div class="project-detail">
+              <div><h4>O desafio</h4><p>Automatizar capturas de redes sociais com estabilidade, controle de autenticação, tratamento de bloqueios e armazenamento centralizado.</p></div>
+              <div><h4>A solução criada</h4><p>Uma <strong>API personalizada</strong> consulta os registros no banco, encaminha a solicitação por uma infraestrutura de <strong>proxies</strong> e <strong>gerenciamento de cookies e sessões</strong>, envia o pedido à <strong>ScreenshotAPI</strong>, recebe a imagem, salva no <strong>Amazon S3</strong> e retorna o resultado ao sistema.</p></div>
+              <div><h4>Fluxo</h4><ol><li>Banco de dados identifica o conteúdo</li><li>API prepara o processamento</li><li>Proxy e sessão autenticada são aplicados</li><li>A captura é gerada</li><li>A imagem é salva no S3</li><li>O sistema recebe o retorno</li></ol></div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="project-category" id="categoria-rtv">
+        <header class="category-heading">
+          <span class="category-icon">AV</span>
+          <div><small>ÁUDIO E VÍDEO</small><h2>Captura, processamento e validação de mídia</h2><p>Estruturas para rádio e TV que conectam gravação, transcrição, IA, armazenamento e operação.</p></div>
+        </header>
+
+        <div class="project-accordion">
+          <details class="project-item" id="plataforma-rtv">
+            <summary><div><span>01</span><h3>Plataforma para captura e gestão de rádio e TV</h3><p>Integração de gravação, transcrição, busca retroativa e IA.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma estrutura integrada para processar conteúdos de rádio e televisão, conectando <strong>captura</strong>, <strong>transcrição</strong>, <strong>conteúdo retroativo</strong>, <strong>títulos por IA</strong> e disponibilização no sistema.</p></div></div>
+          </details>
+
+          <details class="project-item" id="ffmpeg-cloud">
+            <summary><div><span>02</span><h3>Processamento automatizado de áudio e vídeo em cloud</h3><p>FFmpeg, APIs, banco de dados e controle de processamento.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução em evolução</h4><p>Infraestrutura para capturar, converter, segmentar e organizar arquivos de áudio e vídeo em ambiente cloud, com monitoramento de status, logs e integração ao sistema.</p></div><div><h4>Recursos</h4><ul><li>Gravação programada</li><li>Conversão de formatos</li><li>Extração de áudio</li><li>Processamento de streams</li></ul></div></div>
+          </details>
+
+          <details class="project-item" id="validacao-gravacoes">
+            <summary><div><span>03</span><h3>Painel de controle e validação de gravações</h3><p>Visualização de vídeo, áudio e conferência operacional dos arquivos.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma tela para visualizar o vídeo, reproduzir o áudio, conferir duração, canal e qualidade da gravação, aprovar o arquivo ou encaminhá-lo para reprocessamento.</p></div></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="project-category" id="categoria-documentos">
+        <header class="category-heading">
+          <span class="category-icon">OCR</span>
+          <div><small>DOCUMENTOS E IMPRESSOS</small><h2>Extração e automação para conteúdos impressos</h2><p>Processamento de jornais, documentos e cálculos específicos da operação.</p></div>
+        </header>
+
+        <div class="project-accordion">
+          <details class="project-item featured-project" id="textract-jornais">
+            <summary><div><span>01</span><h3>Extração automática de textos com Amazon Textract</h3><p>OCR em cloud para páginas de jornais e documentos.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma esteira recebe os arquivos, envia as páginas ao <strong>Amazon Textract</strong>, organiza os blocos reconhecidos e armazena o texto para busca, classificação e análise.</p></div><div><h4>Recursos</h4><ul><li>OCR de jornais</li><li>Extração de blocos e linhas</li><li>Amazon S3</li><li>Integração com banco de dados</li><li>Preparação para IA</li></ul></div></div>
+          </details>
+
+          <details class="project-item" id="calculo-impresso">
+            <summary><div><span>02</span><h3>Automação de medições para mídia impressa</h3><p>Cálculos semiautomáticos baseados em dimensões e regras operacionais.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Ferramenta para auxiliar em medições e cálculos de matérias publicadas em jornais e revistas, reduzindo etapas manuais sem eliminar a possibilidade de validação humana.</p></div></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="project-category" id="categoria-dados">
+        <header class="category-heading">
+          <span class="category-icon">BI</span>
+          <div><small>DASHBOARDS E DADOS</small><h2>Informação clara para clientes e decisores</h2><p>Relatórios e indicadores incorporados ao sistema para transformar dados em leitura estratégica.</p></div>
+        </header>
+
+        <div class="project-accordion">
+          <details class="project-item featured-project" id="powerbi-embedded">
+            <summary><div><span>01</span><h3>Power BI Embedded integrado ao sistema</h3><p>Dashboards carregados dentro da plataforma, com autenticação e paginação.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>A API do <strong>Power BI Embedded</strong> foi integrada à plataforma para exibir relatórios diretamente no sistema, utilizando <strong>iframe</strong>, autenticação, navegação e paginação entre painéis.</p></div><div><h4>Valor entregue</h4><ul><li>Usuário não precisa sair do sistema</li><li>Experiência visual unificada</li><li>Indicadores centralizados</li><li>Maior valor percebido</li></ul></div></div>
+          </details>
+
+          <details class="project-item" id="analise-reputacao-plataforma">
+            <summary><div><span>02</span><h3>Plataforma de análise de reputação</h3><p>Sentimento, tonalidade, temas, exposição e leitura executiva.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma plataforma que transforma conteúdos monitorados em indicadores de <strong>sentimento</strong>, <strong>tonalidade</strong>, <strong>temas</strong>, <strong>riscos</strong> e <strong>oportunidades</strong>, com filtros, gráficos e visão histórica.</p></div></div>
+          </details>
+
+          <details class="project-item" id="home-analitica">
+            <summary><div><span>03</span><h3>Painel analítico para acompanhamento de resultados</h3><p>Home com gráficos, indicadores, audiências e leitura rápida do cenário.</p></div><i>+</i></summary>
+            <div class="project-detail"><div><h4>A solução criada</h4><p>Uma página inicial orientada a dados com gráficos por mídia, sentimento, principais veículos, audiências, nuvem de palavras e comparativos, facilitando a compreensão dos resultados pelo cliente final.</p></div></div>
+          </details>
+        </div>
+      </section>
+
+      <div class="privacy-note">
+        <strong>Confidencialidade:</strong> os projetos foram descritos por sua finalidade e capacidade técnica. Nomes comerciais, credenciais, volumes e detalhes internos foram preservados.
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-cta">
+    <div class="container projects-cta-inner">
+      <div>
+        <span class="eyebrow eyebrow-light">Converse com a Santana Tech</span>
+        <h2>Tem um processo que precisa virar sistema, automação, dashboard ou solução com IA?</h2>
+        <p>Apresente o cenário atual. A solução pode começar por um módulo, uma integração ou uma prova de conceito.</p>
+      </div>
+      <a class="button button-light" href="https://wa.me/5511956919990?text=Olá,%20gostaria%20de%20apresentar%20uma%20necessidade%20para%20a%20Santana%20Tech." target="_blank" rel="noopener noreferrer">Falar sobre um projeto</a>
+    </div>
+  </section>
+</main>
+
+<footer class="projects-footer">
+  <div class="container"><span>© <span id="currentYear"></span> Santana Tech</span><a href="/">Voltar para a página inicial</a></div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      mobileMenu.hidden = isOpen;
+      document.body.classList.toggle('menu-open', !isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+        document.body.classList.remove('menu-open');
       });
+    });
+  }
 
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.setAttribute('aria-expanded', 'false');
-          mobileMenu.hidden = true;
-          document.body.classList.remove('menu-open');
-        });
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.project-item').forEach(item => {
+    item.addEventListener('toggle', () => {
+      const icon = item.querySelector('summary > i');
+      if (icon) icon.textContent = item.open ? '−' : '+';
+    });
+  });
+
+  const dashboard = document.getElementById('miniDashboard');
+  let loaded = false;
+
+  const loadDashboard = () => {
+    if (loaded) return;
+    loaded = true;
+    setTimeout(() => {
+      dashboard.classList.add('loaded');
+      dashboard.querySelectorAll('[data-value]').forEach(el => {
+        const target = Number(el.dataset.value);
+        const percent = el.dataset.percent === 'true';
+        const start = performance.now();
+        const duration = 1000;
+        const animate = now => {
+          const progress = Math.min((now - start) / duration, 1);
+          const value = Math.floor(target * progress);
+          el.textContent = percent ? `${value}%` : value.toLocaleString('pt-BR');
+          if (progress < 1) requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
       });
-    }
+    }, 650);
+  };
 
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    const dashboardCard = document.getElementById('demoDashboard');
-    const counters = document.querySelectorAll('[data-counter]');
-    let dashboardStarted = false;
-
-    function animateCounter(el) {
-      const target = Number(el.dataset.counter || 0);
-      const isPercent = el.closest('.metric-card')?.querySelector('.label')?.textContent.includes('positivo');
-      const duration = 1300;
-      const start = performance.now();
-      function step(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const value = Math.floor(progress * target);
-        el.textContent = isPercent ? `${value}%` : value.toLocaleString('pt-BR');
-        if (progress < 1) requestAnimationFrame(step);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadDashboard();
+        observer.disconnect();
       }
-      requestAnimationFrame(step);
-    }
+    });
+  }, { threshold: .3 });
 
-    function startDashboard() {
-      if (dashboardStarted) return;
-      dashboardStarted = true;
-
-      setTimeout(() => {
-        dashboardCard.classList.add('ready');
-        counters.forEach(animateCounter);
-      }, 850);
-
-      const chartFont = { family: 'Inter, Arial, sans-serif' };
-      const gridColor = 'rgba(16, 64, 92, 0.08)';
-      const tickColor = '#6f8798';
-
-      new Chart(document.getElementById('evolucaoMidia'), {
-        type: 'line',
-        data: {
-          labels: ['05/07','07/07','09/07','11/07','13/07','15/07','17/07','19/07','21/07','23/07','25/07','27/07','29/07','31/07','02/08'],
-          datasets: [
-            { label: 'Online', data: [12,146,28,7,118,36,22,18,0,68,39,41,20,55,212], borderColor: '#20c7c9', backgroundColor: '#20c7c9', tension: .34, pointRadius: 2 },
-            { label: 'Redes sociais', data: [0,74,32,0,126,17,0,0,48,133,35,76,0,67,58], borderColor: '#2e7df1', backgroundColor: '#2e7df1', tension: .34, pointRadius: 2 },
-            { label: 'Impresso', data: [0,4,0,0,7,0,0,0,0,2,0,3,1,1,5], borderColor: '#44c35f', backgroundColor: '#44c35f', tension: .34, pointRadius: 2 },
-            { label: 'Rádio', data: [0,1,0,0,2,0,1,0,0,3,0,1,0,2,5], borderColor: '#ff8b24', backgroundColor: '#ff8b24', tension: .34, pointRadius: 2 },
-            { label: 'TV', data: [0,2,0,0,1,0,0,0,0,3,0,0,0,1,4], borderColor: '#bb54f0', backgroundColor: '#bb54f0', tension: .34, pointRadius: 2 }
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { position: 'top', labels: { color: '#27465c', font: chartFont, boxWidth: 24, boxHeight: 2 } },
-            tooltip: { mode: 'index', intersect: false }
-          },
-          interaction: { mode: 'index', intersect: false },
-          scales: {
-            y: { grid: { color: gridColor }, ticks: { color: tickColor, font: chartFont } },
-            x: { grid: { display: false }, ticks: { color: tickColor, font: chartFont } }
-          }
-        }
-      });
-
-      new Chart(document.getElementById('sentimentoChart'), {
-        type: 'doughnut',
-        data: {
-          labels: ['Positivo', 'Negativo', 'Neutro'],
-          datasets: [{ data: [88, 7, 5], backgroundColor: ['#59be4d','#ef5656','#f0bb1d'], borderWidth: 0, hoverOffset: 4 }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          cutout: '64%',
-          plugins: {
-            legend: { display: false },
-            tooltip: { bodyFont: chartFont, titleFont: chartFont }
-          }
-        },
-        plugins: [{
-          id: 'centerText',
-          afterDatasetsDraw(chart) {
-            const { ctx } = chart;
-            const meta = chart.getDatasetMeta(0).data[0];
-            if (!meta) return;
-            ctx.save();
-            ctx.textAlign = 'center';
-            ctx.fillStyle = '#071b2d';
-            ctx.font = '800 24px Manrope';
-            ctx.fillText('2.033', meta.x, meta.y + 4);
-            ctx.fillStyle = '#7a8f9f';
-            ctx.font = '12px Inter';
-            ctx.fillText('conteúdos', meta.x, meta.y + 24);
-            ctx.restore();
-          }
-        }]
-      });
-    }
-
-    const dashboardObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startDashboard();
-          dashboardObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.28 });
-
-    if (dashboardCard) dashboardObserver.observe(dashboardCard);
-
-    const sidebarLinks = Array.from(document.querySelectorAll('.sidebar-links a'));
-    const projectSections = sidebarLinks
-      .map(link => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
-
-    const projectObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = `#${entry.target.id}`;
-          sidebarLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === id));
-        }
-      });
-    }, { rootMargin: '-30% 0px -55% 0px', threshold: 0.05 });
-
-    projectSections.forEach(section => projectObserver.observe(section));
-  </script>
+  observer.observe(dashboard);
+</script>
 </body>
 </html>
