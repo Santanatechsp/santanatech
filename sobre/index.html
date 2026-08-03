@@ -53,7 +53,7 @@
 
   <meta
     property="og:description"
-    content="Conheça a trajetória, os valores e a atuação da Santana Tech no desenvolvimento de sistemas, automações, aplicações em nuvem e soluções com inteligência artificial."
+    content="Conheça a trajetória e a atuação da Santana Tech no desenvolvimento de sistemas, automações, aplicações em nuvem e soluções com inteligência artificial."
   >
 
   <meta
@@ -126,13 +126,13 @@
     rel="stylesheet"
   >
 
-  <!-- Componentes globais -->
+  <!-- Cabeçalho e rodapé globais -->
   <link
     rel="stylesheet"
     href="/css/components.css"
   >
 
-  <!-- Estilo próprio da página -->
+  <!-- Estilos exclusivos da página -->
   <style>
     :root {
       --about-dark: #061827;
@@ -177,12 +177,12 @@
       overflow: hidden;
     }
 
+    /* TOPO INSTITUCIONAL */
+
     .about-hero {
       position: relative;
-      min-height: 690px;
-      display: flex;
-      align-items: center;
-      padding: 110px 0 100px;
+      padding: 90px 0 120px;
+      overflow: hidden;
       background:
         radial-gradient(
           circle at 15% 20%,
@@ -222,10 +222,25 @@
       pointer-events: none;
     }
 
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -230px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(55, 214, 209, 0.14);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 70px rgba(55, 214, 209, 0.035),
+        0 0 0 140px rgba(35, 137, 215, 0.025);
+      pointer-events: none;
+    }
+
     .about-hero-content {
       position: relative;
       z-index: 2;
-      max-width: 920px;
+      max-width: 930px;
     }
 
     .about-eyebrow {
@@ -248,25 +263,15 @@
       background: var(--about-cyan);
     }
 
-    .about-hero h1 {
+    .about-hero-lead {
       max-width: 900px;
       margin: 0;
+      color: #d1dee7;
       font-family: "Manrope", Arial, sans-serif;
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 1.04;
-      letter-spacing: -0.045em;
-    }
-
-    .about-hero h1 span {
-      color: var(--about-cyan);
-    }
-
-    .about-hero-lead {
-      max-width: 820px;
-      margin: 32px 0 0;
-      color: #c7d7e2;
-      font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.75;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
     }
 
     .about-hero-lead strong {
@@ -274,50 +279,7 @@
       font-weight: 800;
     }
 
-    .about-hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 38px;
-    }
-
-    .about-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 14px 22px;
-      border: 1px solid transparent;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 800;
-      text-decoration: none;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .about-button:hover {
-      transform: translateY(-2px);
-    }
-
-    .about-button-primary {
-      background: linear-gradient(
-        135deg,
-        var(--about-cyan),
-        #37a8e6
-      );
-      color: #042033;
-      box-shadow: 0 16px 40px rgba(55, 214, 209, 0.2);
-    }
-
-    .about-button-secondary {
-      border-color: rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--about-white);
-      backdrop-filter: blur(12px);
-    }
+    /* RESUMO */
 
     .about-summary {
       position: relative;
@@ -344,7 +306,7 @@
 
     .about-summary-item strong {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       color: var(--about-dark);
       font-family: "Manrope", Arial, sans-serif;
       font-size: 30px;
@@ -356,6 +318,8 @@
       font-size: 14px;
       line-height: 1.65;
     }
+
+    /* SEÇÕES */
 
     .about-section {
       padding: 105px 0;
@@ -379,12 +343,6 @@
     .about-section-heading {
       max-width: 820px;
       margin-bottom: 48px;
-    }
-
-    .about-section-heading.centered {
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
     }
 
     .about-section-heading h2 {
@@ -412,7 +370,6 @@
     }
 
     .about-highlight {
-      position: relative;
       color: var(--about-blue);
       font-weight: 800;
     }
@@ -421,6 +378,8 @@
       color: var(--about-cyan);
       font-weight: 800;
     }
+
+    /* HISTÓRIA */
 
     .about-story {
       display: grid;
@@ -444,7 +403,7 @@
       text-transform: uppercase;
     }
 
-    .about-story-title h2 {
+    .about-story-title h1 {
       margin: 0;
       color: var(--about-dark);
       font-family: "Manrope", Arial, sans-serif;
@@ -492,94 +451,11 @@
       line-height: 1.55;
     }
 
-    .about-timeline {
-      display: grid;
-      gap: 22px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .about-timeline-item {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 36px;
-      padding: 34px;
-      border: 1px solid var(--about-border);
-      border-radius: 20px;
-      background: var(--about-white);
-      box-shadow: 0 14px 42px rgba(5, 39, 62, 0.05);
-    }
-
-    .about-timeline-year {
-      color: var(--about-blue);
-      font-family: "Manrope", Arial, sans-serif;
-      font-size: 30px;
-      font-weight: 800;
-    }
-
-    .about-timeline-content h3 {
-      margin: 0 0 10px;
-      color: var(--about-dark);
-      font-family: "Manrope", Arial, sans-serif;
-      font-size: 22px;
-    }
-
-    .about-timeline-content p {
-      margin: 0;
-      color: var(--about-muted);
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .about-principles {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .about-principle {
-      padding: 36px;
-      border: 1px solid var(--about-border);
-      border-radius: 22px;
-      background: var(--about-white);
-      box-shadow: 0 14px 38px rgba(5, 39, 62, 0.05);
-    }
-
-    .about-principle span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 42px;
-      height: 42px;
-      margin-bottom: 24px;
-      border-radius: 12px;
-      background: linear-gradient(
-        135deg,
-        rgba(55, 214, 209, 0.18),
-        rgba(35, 137, 215, 0.16)
-      );
-      color: var(--about-blue);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .about-principle h3 {
-      margin: 0 0 14px;
-      color: var(--about-dark);
-      font-family: "Manrope", Arial, sans-serif;
-      font-size: 23px;
-    }
-
-    .about-principle p {
-      margin: 0;
-      color: var(--about-muted);
-      font-size: 15px;
-      line-height: 1.8;
-    }
+    /* ESTRUTURA */
 
     .about-structure {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 34px;
       align-items: stretch;
     }
@@ -616,6 +492,8 @@
       font-size: 16px;
       line-height: 1.85;
     }
+
+    /* TECNOLOGIAS */
 
     .about-tech-box {
       display: grid;
@@ -664,6 +542,8 @@
       font-weight: 700;
     }
 
+    /* FECHAMENTO */
+
     .about-final {
       padding: 105px 0;
       background:
@@ -702,9 +582,43 @@
       line-height: 1.8;
     }
 
-    .about-final .about-hero-actions {
+    .about-final-actions {
+      display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
     }
+
+    .about-final-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 22px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: linear-gradient(
+        135deg,
+        var(--about-cyan),
+        #37a8e6
+      );
+      color: #042033;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 16px 40px rgba(55, 214, 209, 0.2);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .about-final-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(55, 214, 209, 0.26);
+    }
+
+    /* RESPONSIVIDADE */
 
     @media (max-width: 980px) {
       .about-summary-card {
@@ -721,7 +635,6 @@
         position: static;
       }
 
-      .about-principles,
       .about-structure {
         grid-template-columns: 1fr;
       }
@@ -733,24 +646,12 @@
       }
 
       .about-hero {
-        min-height: auto;
-        padding: 82px 0 105px;
-      }
-
-      .about-hero h1 {
-        font-size: 43px;
+        padding: 68px 0 100px;
       }
 
       .about-hero-lead {
-        font-size: 17px;
-      }
-
-      .about-hero-actions {
-        flex-direction: column;
-      }
-
-      .about-button {
-        width: 100%;
+        font-size: 27px;
+        line-height: 1.45;
       }
 
       .about-summary {
@@ -770,6 +671,10 @@
         padding: 76px 0;
       }
 
+      .about-story-title h1 {
+        font-size: 38px;
+      }
+
       .about-story-content p:first-child {
         font-size: 20px;
       }
@@ -779,13 +684,6 @@
         font-size: 21px;
       }
 
-      .about-timeline-item {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 28px;
-      }
-
-      .about-principle,
       .about-structure-card {
         padding: 30px;
       }
@@ -795,6 +693,14 @@
       }
 
       .about-tech-list span {
+        width: 100%;
+      }
+
+      .about-final-actions {
+        flex-direction: column;
+      }
+
+      .about-final-button {
         width: 100%;
       }
     }
@@ -878,12 +784,12 @@
 
 <body>
 
-  <!-- Cabeçalho carregado pelo componente global -->
+  <!-- Cabeçalho global -->
   <div id="site-header"></div>
 
   <main class="about-main">
 
-    <!-- HERO -->
+    <!-- APRESENTAÇÃO -->
     <section class="about-hero">
       <div class="container">
 
@@ -892,11 +798,6 @@
           <span class="about-eyebrow">
             Quem somos
           </span>
-
-          <h1>
-            Tecnologia construída com
-            <span>experiência, evolução e responsabilidade.</span>
-          </h1>
 
           <p class="about-hero-lead">
             A <strong>Santana Tech</strong> é uma empresa brasileira de
@@ -908,25 +809,8 @@
             <strong>inteligência artificial</strong>.
           </p>
 
-          <div class="about-hero-actions">
-
-            <a
-              class="about-button about-button-primary"
-              href="#nossa-historia"
-            >
-              Conhecer nossa história
-            </a>
-
-            <a
-              class="about-button about-button-secondary"
-              href="/#contato"
-            >
-              Falar com a Santana Tech
-            </a>
-
-          </div>
-
         </div>
+
       </div>
     </section>
 
@@ -937,18 +821,18 @@
         <div class="about-summary-card">
 
           <div class="about-summary-item">
-            <strong>2016</strong>
+            <strong>Desde 2016</strong>
 
             <span>
-              Início da trajetória profissional na área de tecnologia.
+              Experiência profissional construída na área de tecnologia.
             </span>
           </div>
 
           <div class="about-summary-item">
-            <strong>2024</strong>
+            <strong>Desde 2024</strong>
 
             <span>
-              Formalização da Santana Tech como empresa de tecnologia.
+              Santana Tech formalizada como empresa de tecnologia.
             </span>
           </div>
 
@@ -961,7 +845,7 @@
           </div>
 
           <div class="about-summary-item">
-            <strong>Brasil</strong>
+            <strong>Todo o Brasil</strong>
 
             <span>
               Atendimento remoto para empresas de diferentes regiões do país.
@@ -985,50 +869,58 @@
           <div class="about-story-title">
             <small>Nossa história</small>
 
-            <h2>
+            <h1>
               Uma trajetória que começou com curiosidade e evoluiu para
               <span class="about-highlight">
                 soluções empresariais completas.
               </span>
-            </h2>
+            </h1>
           </div>
 
           <div class="about-story-content">
 
             <p>
-              A história da Santana Tech começou antes mesmo da formalização
-              da empresa.
+              A história da <strong>Santana Tech</strong> começou antes mesmo
+              da formalização da empresa.
             </p>
 
             <p>
               Em <strong>2016</strong>, Douglas iniciou sua trajetória na área
               de tecnologia por meio da
               <strong>manutenção de computadores</strong>,
-              suporte técnico e resolução de problemas práticos.
+              do suporte técnico e da busca por conhecimentos que permitissem
+              resolver problemas reais.
             </p>
 
             <p>
-              O que começou como uma busca por conhecimento próprio passou a
-              se transformar em experiência profissional. A cada novo desafio,
-              surgiam novas necessidades, novas ferramentas e novas áreas de
-              aprendizado.
+              O que começou como interesse e aprendizado próprio passou a se
+              transformar em experiência profissional. A cada novo desafio,
+              surgiam diferentes necessidades, ferramentas e áreas de
+              conhecimento.
             </p>
 
             <p>
               Com o passar dos anos, a atuação evoluiu da manutenção e do
               suporte para o
               <strong>desenvolvimento de sistemas</strong>,
-              <strong>programação web</strong>,
-              <strong>bancos de dados</strong>,
-              <strong>integrações</strong> e
+              a <strong>programação web</strong>,
+              os <strong>bancos de dados</strong>,
+              as <strong>integrações entre plataformas</strong> e a
               <strong>automação de processos</strong>.
             </p>
 
             <p>
-              Em <strong>2024</strong>, a Santana Tech foi formalizada para
-              oferecer aos clientes uma estrutura comercial mais completa,
-              com emissão de documentos fiscais, organização dos serviços,
-              gerenciamento de projetos e responsabilidade sobre as entregas.
+              A necessidade de atender clientes de forma mais estruturada,
+              formalizar os serviços e emitir documentos fiscais levou à
+              criação da <strong>Santana Tech</strong>, formalizada em
+              <strong>2024</strong>.
+            </p>
+
+            <p>
+              A empresa passou a centralizar o atendimento, a organização
+              comercial, o planejamento e o gerenciamento dos projetos,
+              estabelecendo uma estrutura profissional para a prestação dos
+              serviços.
             </p>
 
             <div class="about-quote">
@@ -1038,11 +930,12 @@
             </div>
 
             <p>
-              Hoje, a empresa atua com
+              Atualmente, a Santana Tech atua com
               <strong>desenvolvimento full stack</strong>,
               utilizando tecnologias como
               <strong>Python</strong>,
               <strong>PHP</strong>,
+              <strong>JavaScript</strong>,
               <strong>bancos de dados</strong>,
               <strong>APIs</strong>,
               <strong>serviços AWS</strong> e
@@ -1050,16 +943,16 @@
             </p>
 
             <p>
-              Essa evolução não aconteceu de uma única vez. Ela foi construída
-              por meio de estudo, prática, erros, melhorias, projetos reais e
-              adaptação constante a um mercado que muda rapidamente.
+              Essa evolução foi construída por meio de estudo, prática,
+              desafios técnicos, projetos reais e adaptação constante a um
+              mercado que se transforma rapidamente.
             </p>
 
             <p>
-              A Santana Tech carrega exatamente essa característica:
-              <strong>
-                aprender, compreender, desenvolver, testar e evoluir.
-              </strong>
+              Mais do que utilizar uma tecnologia específica, o trabalho da
+              Santana Tech consiste em compreender a necessidade, definir uma
+              arquitetura adequada e desenvolver uma solução compatível com a
+              realidade de cada empresa.
             </p>
 
           </div>
@@ -1069,190 +962,7 @@
       </div>
     </section>
 
-    <!-- LINHA DO TEMPO -->
-    <section class="about-section about-section-light">
-      <div class="container">
-
-        <div class="about-section-heading centered">
-
-          <span class="about-eyebrow">
-            Evolução
-          </span>
-
-          <h2>
-            Uma trajetória construída
-            <span class="about-highlight">
-              etapa por etapa.
-            </span>
-          </h2>
-
-          <p>
-            Cada fase contribuiu para formar a base técnica e profissional
-            que hoje sustenta os projetos da Santana Tech.
-          </p>
-
-        </div>
-
-        <div class="about-timeline">
-
-          <article class="about-timeline-item">
-
-            <div class="about-timeline-year">
-              2016
-            </div>
-
-            <div class="about-timeline-content">
-              <h3>Primeiros passos em tecnologia</h3>
-
-              <p>
-                Início da atuação com manutenção de computadores,
-                suporte técnico e aprendizado prático voltado à resolução
-                de problemas reais.
-              </p>
-            </div>
-
-          </article>
-
-          <article class="about-timeline-item">
-
-            <div class="about-timeline-year">
-              Evolução
-            </div>
-
-            <div class="about-timeline-content">
-              <h3>Desenvolvimento e programação</h3>
-
-              <p>
-                Expansão dos conhecimentos para programação, desenvolvimento
-                web, PHP, Python, bancos de dados, integrações e sistemas
-                empresariais.
-              </p>
-            </div>
-
-          </article>
-
-          <article class="about-timeline-item">
-
-            <div class="about-timeline-year">
-              2024
-            </div>
-
-            <div class="about-timeline-content">
-              <h3>Formalização da Santana Tech</h3>
-
-              <p>
-                Criação da empresa para centralizar o atendimento,
-                profissionalizar os serviços, organizar contratos e assumir
-                formalmente a gestão dos projetos.
-              </p>
-            </div>
-
-          </article>
-
-          <article class="about-timeline-item">
-
-            <div class="about-timeline-year">
-              Hoje
-            </div>
-
-            <div class="about-timeline-content">
-              <h3>Sistemas, nuvem e inteligência artificial</h3>
-
-              <p>
-                Desenvolvimento de soluções completas utilizando arquitetura
-                em nuvem, automações, APIs, bancos de dados, serviços AWS,
-                dashboards e inteligência artificial.
-              </p>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PRINCÍPIOS -->
-    <section class="about-section">
-      <div class="container">
-
-        <div class="about-section-heading">
-
-          <span class="about-eyebrow">
-            Nossa forma de trabalhar
-          </span>
-
-          <h2>
-            Tecnologia com
-            <span class="about-highlight">
-              clareza, proximidade e responsabilidade.
-            </span>
-          </h2>
-
-          <p>
-            A Santana Tech acredita que uma boa solução não depende apenas
-            de código. Ela depende de entendimento, planejamento,
-            comunicação e compromisso com o resultado.
-          </p>
-
-        </div>
-
-        <div class="about-principles">
-
-          <article class="about-principle">
-            <span>01</span>
-
-            <h3>Entender antes de desenvolver</h3>
-
-            <p>
-              Cada projeto começa pelo entendimento do processo,
-              dos usuários, dos dados, das dificuldades atuais e do
-              resultado que a empresa espera alcançar.
-            </p>
-          </article>
-
-          <article class="about-principle">
-            <span>02</span>
-
-            <h3>Soluções sob medida</h3>
-
-            <p>
-              A tecnologia deve se adaptar à realidade do negócio.
-              Por isso, buscamos construir sistemas e automações de acordo
-              com a necessidade de cada operação.
-            </p>
-          </article>
-
-          <article class="about-principle">
-            <span>03</span>
-
-            <h3>Comunicação próxima</h3>
-
-            <p>
-              O acompanhamento direto reduz ruídos, facilita decisões e
-              mantém o cliente informado durante o planejamento,
-              desenvolvimento e implantação.
-            </p>
-          </article>
-
-          <article class="about-principle">
-            <span>04</span>
-
-            <h3>Evolução contínua</h3>
-
-            <p>
-              Sistemas e processos mudam com o tempo. Por isso, os projetos
-              são pensados para receber melhorias, integrações e novas
-              funcionalidades quando necessário.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ESTRUTURA -->
+    <!-- ESTRUTURA PROFISSIONAL -->
     <section class="about-section about-section-dark">
       <div class="container">
 
@@ -1265,13 +975,14 @@
           <h2>
             Gestão centralizada e
             <span class="about-highlight-dark">
-              capacidade adaptável.
+              capacidade adaptável para cada projeto.
             </span>
           </h2>
 
           <p>
-            A Santana Tech mantém uma operação enxuta, com gerenciamento
-            próximo e responsabilidade clara sobre cada projeto.
+            A Santana Tech mantém uma estrutura operacional enxuta, com
+            acompanhamento próximo, gerenciamento técnico e responsabilidade
+            clara sobre as entregas.
           </p>
 
         </div>
@@ -1283,14 +994,14 @@
             <small>Direção técnica</small>
 
             <h3>
-              Acompanhamento direto em todas as etapas.
+              Acompanhamento direto das decisões técnicas.
             </h3>
 
             <p>
               A direção técnica e o gerenciamento dos projetos são conduzidos
-              diretamente pela Santana Tech. Isso permite acompanhar de perto
-              o planejamento, a arquitetura, o desenvolvimento, a implantação
-              e a evolução de cada solução.
+              diretamente pela Santana Tech, permitindo acompanhar o
+              planejamento, a arquitetura, o desenvolvimento, a implantação e
+              a evolução das soluções.
             </p>
 
           </article>
@@ -1304,10 +1015,10 @@
             </h3>
 
             <p>
-              Em projetos de maior porte ou que exigem conhecimentos
-              complementares, a Santana Tech trabalha com parceiros técnicos
-              selecionados de acordo com a necessidade, o escopo e a
-              complexidade da solução.
+              Projetos de maior porte ou que exigem conhecimentos
+              complementares podem contar com parceiros técnicos selecionados
+              de acordo com o escopo, a complexidade e as especialidades
+              necessárias.
             </p>
 
           </article>
@@ -1321,9 +1032,9 @@
             </h3>
 
             <p>
-              Mesmo quando há participação de parceiros, o planejamento,
-              o gerenciamento, a integração das entregas e o acompanhamento
-              da qualidade permanecem sob responsabilidade da Santana Tech.
+              Mesmo quando há participação de parceiros, o planejamento, o
+              gerenciamento, a integração das entregas e o acompanhamento da
+              qualidade permanecem sob responsabilidade da Santana Tech.
             </p>
 
           </article>
@@ -1338,9 +1049,8 @@
 
             <p>
               O atendimento é realizado principalmente de forma remota,
-              possibilitando desenvolver projetos para empresas de todo
-              o Brasil, com reuniões e alinhamentos constantes durante
-              cada etapa.
+              possibilitando desenvolver projetos para empresas de todo o
+              Brasil, com reuniões e alinhamentos durante cada etapa.
             </p>
 
           </article>
@@ -1350,13 +1060,14 @@
       </div>
     </section>
 
-    <!-- TECNOLOGIAS -->
+    <!-- CONHECIMENTO TÉCNICO -->
     <section class="about-section about-section-light">
       <div class="container">
 
         <div class="about-tech-box">
 
           <div>
+
             <span class="about-eyebrow">
               Conhecimento técnico
             </span>
@@ -1367,13 +1078,17 @@
 
             <p>
               A Santana Tech não limita os projetos a uma única ferramenta.
-              A arquitetura é definida conforme o problema, o volume,
-              a integração necessária, a segurança e a possibilidade
-              de crescimento.
+              A arquitetura é definida considerando o problema, o volume de
+              dados, as integrações, a segurança, o desempenho e a necessidade
+              de crescimento da solução.
             </p>
+
           </div>
 
-          <div class="about-tech-list" aria-label="Tecnologias e competências">
+          <div
+            class="about-tech-list"
+            aria-label="Tecnologias e competências"
+          >
             <span>Python</span>
             <span>PHP</span>
             <span>JavaScript</span>
@@ -1381,9 +1096,9 @@
             <span>Bancos de dados</span>
             <span>APIs</span>
             <span>Integrações</span>
-            <span>AWS</span>
+            <span>Amazon Web Services</span>
             <span>Containers</span>
-            <span>Automação</span>
+            <span>Automação de processos</span>
             <span>Inteligência artificial</span>
             <span>Desenvolvimento full stack</span>
           </div>
@@ -1413,20 +1128,13 @@
             responsabilidade e acompanhamento próximo.
           </p>
 
-          <div class="about-hero-actions">
+          <div class="about-final-actions">
 
             <a
-              class="about-button about-button-primary"
+              class="about-final-button"
               href="/#contato"
             >
               Falar sobre um projeto
-            </a>
-
-            <a
-              class="about-button about-button-secondary"
-              href="/projetos/"
-            >
-              Conhecer nossos projetos
             </a>
 
           </div>
@@ -1438,10 +1146,10 @@
 
   </main>
 
-  <!-- Rodapé carregado pelo componente global -->
+  <!-- Rodapé global -->
   <div id="site-footer"></div>
 
-  <!-- Componentes globais -->
+  <!-- Carregamento do cabeçalho e rodapé -->
   <script src="/js/components.js"></script>
 
 </body>
