@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.seudominio.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.seudominio.com.br/analise-de-reputacao/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/ia-para-clipping/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/radar-de-risco-reputacional/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/plataforma-white-label-para-clipadoras/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/integracao-api-clipping/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/dashboards-de-comunicacao/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/sistemas-personalizados/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.seudominio.com.br/aplicacoes-aws/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://santanatechsp.com.br/</loc>
+  </url>
+
+  <!-- Serviços principais -->
+  <url>
+    <loc>https://santanatechsp.com.br/sistemas-personalizados/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/solucoes-com-inteligencia-artificial/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/aplicacoes-aws/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/integracao-api/</loc>
+  </url>
+
+  <!-- Reputação e comunicação -->
+  <url>
+    <loc>https://santanatechsp.com.br/analise-de-reputacao/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/radar-de-risco-reputacional/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/dashboards-de-comunicacao/</loc>
+  </url>
+
+  <!-- Soluções para clipping -->
+  <url>
+    <loc>https://santanatechsp.com.br/ia-para-clipping/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/plataforma-white-label-para-clipadoras/</loc>
+  </url>
+
+  <!-- Demonstrações e projetos -->
+  <url>
+    <loc>https://santanatechsp.com.br/demo-analise-reputacao/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/projetos/</loc>
+  </url>
+
+  <url>
+    <loc>https://santanatechsp.com.br/extras/</loc>
+  </url>
+
 </urlset>
