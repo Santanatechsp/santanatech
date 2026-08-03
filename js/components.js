@@ -1,3 +1,33 @@
+// ==========================================================
+// GOOGLE ANALYTICS 4
+// ==========================================================
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-P7N78K08HX', {
+  send_page_view: true
+});
+
+const googleAnalyticsScript = document.createElement('script');
+
+googleAnalyticsScript.async = true;
+
+googleAnalyticsScript.src =
+  'https://www.googletagmanager.com/gtag/js?id=G-P7N78K08HX';
+
+document.head.appendChild(googleAnalyticsScript);
+
+
+// ==========================================================
+// COMPONENTES GLOBAIS
+// ==========================================================
+
 (function () {
   'use strict';
 
@@ -21,7 +51,10 @@
 
       element.innerHTML = await response.text();
     } catch (error) {
-      console.error('Não foi possível carregar o componente:', error);
+      console.error(
+        'Não foi possível carregar o componente:',
+        error
+      );
 
       element.innerHTML = `
         <div class="component-load-error">
@@ -32,43 +65,66 @@
   }
 
   function initializeMobileMenu() {
-    const toggle = document.getElementById('globalMenuToggle');
-    const menu = document.getElementById('globalMobileMenu');
+    const toggle = document.getElementById(
+      'globalMenuToggle'
+    );
+
+    const menu = document.getElementById(
+      'globalMobileMenu'
+    );
 
     if (!toggle || !menu) {
       return;
     }
 
     function closeMenu() {
-      toggle.setAttribute('aria-expanded', 'false');
-      menu.hidden = true;
-      document.body.classList.remove('menu-open');
-    }
-
-    toggle.addEventListener('click', function () {
-      const isOpen =
-        toggle.getAttribute('aria-expanded') === 'true';
-
       toggle.setAttribute(
         'aria-expanded',
-        String(!isOpen)
+        'false'
       );
 
-      menu.hidden = isOpen;
+      menu.hidden = true;
 
-      document.body.classList.toggle(
-        'menu-open',
-        !isOpen
+      document.body.classList.remove(
+        'menu-open'
       );
-    });
+    }
 
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
-    });
+    toggle.addEventListener(
+      'click',
+      function () {
+        const isOpen =
+          toggle.getAttribute(
+            'aria-expanded'
+          ) === 'true';
+
+        toggle.setAttribute(
+          'aria-expanded',
+          String(!isOpen)
+        );
+
+        menu.hidden = isOpen;
+
+        document.body.classList.toggle(
+          'menu-open',
+          !isOpen
+        );
+      }
+    );
+
+    menu
+      .querySelectorAll('a')
+      .forEach(function (link) {
+        link.addEventListener(
+          'click',
+          closeMenu
+        );
+      });
   }
 
   function markCurrentPage() {
-    let currentPath = window.location.pathname;
+    let currentPath =
+      window.location.pathname;
 
     if (!currentPath.endsWith('/')) {
       currentPath += '/';
@@ -77,21 +133,30 @@
     document
       .querySelectorAll('[data-nav]')
       .forEach(function (link) {
-        const linkPath = link.getAttribute('data-nav');
+        const linkPath =
+          link.getAttribute('data-nav');
 
         if (linkPath === currentPath) {
           link.classList.add('active');
-          link.setAttribute('aria-current', 'page');
+
+          link.setAttribute(
+            'aria-current',
+            'page'
+          );
         }
       });
   }
 
   function updateCurrentYear() {
     document
-      .querySelectorAll('[data-current-year]')
+      .querySelectorAll(
+        '[data-current-year]'
+      )
       .forEach(function (element) {
         element.textContent =
-          String(new Date().getFullYear());
+          String(
+            new Date().getFullYear()
+          );
       });
   }
 
@@ -101,6 +166,7 @@
         '#site-header',
         '/components/header.html'
       ),
+
       loadComponent(
         '#site-footer',
         '/components/footer.html'
@@ -112,7 +178,9 @@
     updateCurrentYear();
   }
 
-  if (document.readyState === 'loading') {
+  if (
+    document.readyState === 'loading'
+  ) {
     document.addEventListener(
       'DOMContentLoaded',
       initializeComponents
