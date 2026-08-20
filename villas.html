@@ -184,25 +184,21 @@ input{font-family:inherit;}
 .mc-top{display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:1;}
 .mc-club{font-size:10px; letter-spacing:0.08em; color:var(--gold-glow); text-transform:uppercase; font-weight:700;}
 .mc-tier{
-  font-size:9px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:5px 10px;
-  border-radius:100px; border:1px solid var(--hairline-dark); color:var(--gold-glow);
+  font-size:9px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:6px 12px;
+  border-radius:100px; background:rgba(255,255,255,0.08); border:1px solid var(--hairline-dark); color:var(--gold-glow);
 }
-.mc-chip{width:34px; height:26px; border-radius:5px; margin-top:14px;
-  background:linear-gradient(135deg, var(--gold-bright), var(--gold-dim));
-  position:relative; z-index:1;
-}
-.mc-name{font-family:'Poppins',sans-serif; font-size:22px; letter-spacing:0.03em; margin:16px 0 2px; position:relative; z-index:1;}
-.mc-role{font-size:11px; color:var(--muted); margin:0 0 20px; position:relative; z-index:1;}
+.mc-name{font-family:'Poppins',sans-serif; font-size:22px; font-weight:600; letter-spacing:0.01em; margin:18px 0 2px; position:relative; z-index:1; color:var(--white);}
+.mc-role{font-size:11px; color:var(--muted-2); margin:0 0 22px; position:relative; z-index:1;}
 .mc-goalrow{display:flex; align-items:center; gap:18px; position:relative; z-index:1;}
 .ring-wrap{position:relative; width:88px; height:88px; flex-shrink:0;}
 .ring-wrap svg{transform:rotate(-90deg);}
 .ring-pct{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;}
-.ring-pct b{font-family:'Poppins',sans-serif; font-size:20px; line-height:1;}
-.ring-pct span{font-size:9px; color:var(--muted); letter-spacing:0.08em; margin-top:2px;}
+.ring-pct b{font-family:'Poppins',sans-serif; font-size:20px; line-height:1; color:var(--white);}
+.ring-pct span{font-size:9px; color:var(--muted-2); letter-spacing:0.06em; margin-top:2px;}
 .mc-goalinfo{flex:1;}
-.mc-goalinfo .lbl{font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;}
-.mc-goalinfo .val{font-family:'Poppins',sans-serif; font-size:26px; letter-spacing:0.02em;}
-.mc-goalinfo .val small{font-size:13px; color:var(--muted); font-weight:400;}
+.mc-goalinfo .lbl{font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted-2); margin-bottom:6px;}
+.mc-goalinfo .val{font-family:'Poppins',sans-serif; font-size:28px; font-weight:600; letter-spacing:0.01em; color:var(--white);}
+.mc-goalinfo .val small{font-size:13px; color:var(--muted-2); font-weight:400;}
 .mc-remain{font-size:11px; color:var(--gold-glow); margin-top:6px;}
 
 /* Generic sections */
@@ -441,16 +437,16 @@ input{font-family:inherit;}
 /* Barber shell goes wide + gets a proper sidenav on tablet/desktop */
 @media(min-width:860px){
   .bshell{
-    display:flex; align-items:flex-start; max-width:1040px; padding-bottom:0;
+    display:flex; align-items:flex-start; width:100%; padding-bottom:0;
     box-shadow:none !important;
   }
   .bsidenav{display:flex;}
-  .bmain{flex:1; min-width:0; padding:28px 8px 60px;}
-  .btopbar{border-radius:22px; margin-bottom:4px;}
-  .bcontent{padding:20px 0 8px; max-width:640px;}
+  .bmain{flex:1; min-width:0; padding:0;}
+  .btopbar{border-radius:0;}
+  .bcontent{padding:28px 36px 60px; max-width:920px;}
   .bottomnav{display:none;}
-  .stat-row{grid-template-columns:repeat(2,minmax(160px,220px));}
-  .service-grid{grid-template-columns:repeat(3,1fr); max-width:640px;}
+  .stat-row{grid-template-columns:repeat(2,minmax(160px,240px));}
+  .service-grid{grid-template-columns:repeat(3,1fr); max-width:760px;}
 }
 @media(min-width:481px) and (max-width:859px){
   .bshell{box-shadow:0 0 60px rgba(20,17,25,0.12);}
@@ -749,11 +745,11 @@ function ringSvg(pct, size=88, stroke=8){
   const c = 2*Math.PI*r;
   const off = c - (Math.min(pct,100)/100)*c;
   return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
-    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="var(--surface-3)" stroke-width="${stroke}"/>
+    <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="${stroke}"/>
     <circle cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke="url(#gold-grad)" stroke-width="${stroke}" stroke-linecap="round"
       stroke-dasharray="${c}" stroke-dashoffset="${off}" style="transition:stroke-dashoffset 1s cubic-bezier(.16,1,.3,1)"/>
     <defs><linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="var(--gold-dim)"/><stop offset="100%" stop-color="var(--gold-bright)"/>
+      <stop offset="0%" stop-color="var(--gold)"/><stop offset="100%" stop-color="var(--gold-glow)"/>
     </linearGradient></defs>
   </svg>`;
 }
@@ -771,7 +767,6 @@ function viewHome(b){
       <span class="mc-club">Villas Performance</span>
       <span class="mc-tier">${tier}</span>
     </div>
-    <div class="mc-chip"></div>
     <h2 class="mc-name">${b.name}</h2>
     <p class="mc-role">Barbeiro titular · ID #${b.id.toUpperCase()}</p>
     <div class="mc-goalrow">
